@@ -34,3 +34,8 @@
 #video {
   font-size: small;
 }
+.commedian img {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+}

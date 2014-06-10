@@ -1,7 +1,10 @@
 <h1>Commedians List</h1>
 
 <% @users.each do |user| %>
-
-  <p><%= link_to user.name, user %></p>
-
+  <div class="commedian">
+    <%= link_to user do %>
+      <%= image_tag user.user_image.url || "mic.svg" %>
+      <%= user.name %>
+     <% end %>
+  </div>
 <% end %>

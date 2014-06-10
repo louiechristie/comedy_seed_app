@@ -4,7 +4,7 @@
 
 <div id="media">
   <div id="pic">
-    <%= image_tag("mic.svg") %>
+    <%= image_tag @user.user_image.url || "mic.svg" %>
   </div>
   <div id="video">
     <%= @user.try(:video) || "No video supplied." %></br>

@@ -6,6 +6,7 @@ gem 'rails', '3.2.18'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'ransack'
+gem 'carrierwave', '= 0.9.0'
 
 group :development, :test do
   gem 'pry-rails'
