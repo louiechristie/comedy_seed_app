@@ -1,14 +1,17 @@
 class UsersController < ApplicationController
   
   def index
-    @users = User.all
+    @q = User.search(params[:q])
+    @users = @q.result(:distinct => true)
   end
 
   def show
+    @q = User.search(params[:q])
     @user = User.find params[:id]
   end
 
   def new
+    @q = User.search(params[:q])
     @user = User.new
   end
 
@@ -21,7 +24,8 @@ class UsersController < ApplicationController
     end
   end
 
-  def edit    
+  def edit
+    @q = User.search(params[:q])  
     @user = User.find params[:id]
   end
 

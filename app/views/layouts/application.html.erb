@@ -18,10 +18,17 @@
       <li><%= link_to image_tag("comedy_seed_logo.png"), root_path %></li>
       <li><%= link_to "Commedians", users_path %></li>
       <li><%= link_to "New User", new_user_path %></li>
+      <li>Profile</li>
+      <li>
+        <%= search_form_for @q do |f| %>
+        <%= f.text_field :name_cont %>
+        <%= f.submit %>
+        <% end %>
+      </li>
     </ul>
   </nav>
 
-<div id="container"
+<div id="container">
 
 <%= yield %>
 

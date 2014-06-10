@@ -23,7 +23,13 @@ nav ul {
 #container {
 }
 
-nav li {
+nav li, form {
   display: inline;
   margin-right: 20px;
+}
+
+h1 {
+  padding-top: 20px;
+  padding-left: 10px;
+  font-family: 'Short Stack', cursive;
 }
