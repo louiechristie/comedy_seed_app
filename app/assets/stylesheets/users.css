@@ -14,8 +14,20 @@
   border-radius: 5px;
 }
 
-#pic, #pic img {
+#pic, #pic img, #video {
   width: 320px;
+}
+
+#pic, #contact {
+  margin-bottom: 10px;
+}
+
+#contact, #bio {
+  padding: 10px;
+}
+
+#video {
+  font-size: small;
 }
 
 h1 {
