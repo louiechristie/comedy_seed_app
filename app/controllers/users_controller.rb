@@ -13,14 +13,14 @@ class UsersController < ApplicationController
   end
 
   def create
-    user = User.create params[:user]
+    @user = User.create params[:user]
     if @user.save
       redirect_to @user
     else
       render :new
     end
   end
-  
+
   def edit    
     @user = User.find params[:id]
   end

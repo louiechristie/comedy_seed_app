@@ -2,6 +2,6 @@
 
 <% @users.each do |user| %>
 
-  <h2>User name: <%= user.name %></h2>
+  <p>Name: <%= link_to user.name, user %></p>
 
 <% end %>
