@@ -3,20 +3,29 @@
 <head>
   <title>Comedy Seed</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
+
+  <%= stylesheet_link_tag 'http://fonts.googleapis.com/css?family=Short+Stack' %>
+
+
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
+
 </head>
 <body>
 
   <nav>
     <ul>
-      <li><%= link_to "Comedy Seed", root_path %></li>
+      <li><%= link_to image_tag("comedy_seed_logo.png"), root_path %></li>
       <li><%= link_to "Commedians", users_path %></li>
       <li><%= link_to "New User", new_user_path %></li>
     </ul>
   </nav>
 
+<div id="container"
+
 <%= yield %>
+
+</div>
 
 </body>
 </html>

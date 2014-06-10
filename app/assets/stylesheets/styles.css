@@ -1,0 +1,33 @@
+* {
+  border: 1px dotted black;
+}
+
+body {
+  font-family: Helvetica;
+}
+
+.errors {
+  background-color: red;
+}
+
+#container, nav {
+  background-color: white
+}
+
+nav {
+  padding: 2px;
+  font-family: 'Short Stack', cursive;
+  vertical-align: top;
+}
+
+nav ul {
+  padding: 0px;
+}
+
+#container {
+}
+
+nav li {
+  display: inline;
+  margin-right: 20px;
+}

@@ -7,8 +7,12 @@
 </ul>
 <%= form_for(@user) do |f| %>
   <%= f.label :name %>
-  <%= f.text_field :name %>
+  <%= f.text_field :name %></br>
   <%= f.label :email %>
-  <%= f.text_field :email %>
+  <%= f.text_field :email %></br>
+  <%= f.label "Youtube video link" %>
+  <%= f.text_field :video %></br>
+  <%= f.label "Biography" %></br>
+  <%= f.text_area :bio %></br>
   <%= f.submit %>
 <% end %>

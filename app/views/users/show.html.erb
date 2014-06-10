@@ -1,7 +1,22 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Name: <%= @user.try(:name) %></h1>
+<h1 id="name"><%= @user.try(:name) %></h1>
 
-<p>Email: <%= @user.try(:email) %></p>
+<div id="media">
+  <div id="pic">
+    <%= image_tag("mic.svg") %>
+  </div>
+  <div id="video">
+    <%= @user.try(:video) || "No video supplied." %></br>
+    <%= raw(youtube_embed(@user.try(:video))) %>
+  </div>
+</div>
 
-<p>Bio: <%= @user.try(:bio) %></p>
+<div id="text">
+  <div id="bio">
+    Bio: <%= simple_format(@user.try(:bio)) || "No biography information available." %>
+  </div>
+  <div id="contact">
+    Email: <%= @user.try(:email) %>
+  </div>
+</div>
