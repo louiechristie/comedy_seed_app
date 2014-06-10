@@ -13,9 +13,6 @@
 </div>
 
 <div id="text">
-  <div id="contact">
-    Contact email: <%= @user.try(:email) %>
-  </div>
   <div id="bio">
     Bio: <%= simple_format(@user.try(:bio)) || "No biography information available." %>
   </div>
