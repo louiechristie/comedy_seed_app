@@ -11,6 +11,7 @@ User.create(
             email: 'bill@bailey.com',
             video: 'https://www.youtube.com/watch?v=8-xcOrgGFtA',
             user_image: open("http://www.comedycv.co.uk/billbailey/2003-january-bill-bailey.jpg"),
+            password: '12341234',
             bio: %Q{Bill Bailey’s career has gone from strength to strength from being the founder member of The Rubber Bishops in 1989 to performing nationally in concert halls on his own one man tour.
 
 He also performs in universities and for corporate clients and internationally at the Melbourne and New Zealand Comedy Festivals as well as Hong Kong and Amsterdam.
@@ -37,6 +38,7 @@ User.create(
             email: 'alan@carr.com',
             video: 'https://www.youtube.com/watch?v=qytQnITpl8w',
             user_image: open("http://www.comedycv.co.uk/alancarr/alan-carr-2005-may.jpg"),
+            password: '12341234',
             bio: %Q{"Alan Carr is the spiritual son of Frankie Howerd." City Life Magazine
 
 Since winning the BBC New Comedy Award for Stand-up 2001 and CityLife Best Newcomer of the Year Alan Carr has risen to become one of the hottest young stand-up stars in Britain. His 2002 Edinburgh Festival show Me 'Ead's Spinnin was given a four star review in Edinburgh bible The List and also became the The Daily Telegraph's Critic's Choice. While 2003's I Love Alan Carr rated as a four star show in both the The Scotsman and The Independent.
@@ -60,6 +62,7 @@ User.create(
             email: 'micky@flanagan.com',
             video: 'https://www.youtube.com/watch?v=IXyt6VcoUQI',
             user_image: open("http://www.comedycv.co.uk/mickyflanagan/2003-march-micky-flanagan.jpg"),
+            password: '12341234',
             bio: %Q{A professional stand-up since 1997, Micky Flanagan draws on his East End background as he ruthlessly deconstructs the Cockney myth with razor-sharp observational wit. He tells a comic tale of a working class upbringing, where alphabetti spaghetti is a luxury. Micky has come a long way since then, thanks to a university education, and he is now that rare delight - an intellectual Cockney.
 
 Micky's unique brand of intelligent humour appeals to men and women equally, as he bemoans the lot of modern man in pursuit of the perfect idle day, and celebrates being turned away from a night club because his feet are killing him.
@@ -86,6 +89,7 @@ User.create(
             email: 'sarah@millican.com',
             video: 'https://www.youtube.com/watch?v=Gyuo9ZH3frE',
             user_image: open("http://www.comedycv.co.uk/sarahmillican/sarah-millican-2005-may.jpg"),
+            password: '12341234',
             bio: %Q{Winner - Amused Moose Comedy Awards 2005
 Runner Up - So You Think You're Funny 2005
 Runner Up - Funny Women 2005
@@ -118,6 +122,7 @@ User.create(
             email: 'russell@howard.com',
             video: 'https://www.youtube.com/watch?v=4wCDuJUiisU',
             user_image: open("http://www.comedycv.co.uk/russellhoward/russell-howard-2005-october.jpg"),
+            password: '12341234',
             bio: %Q{An instant hit with his innate ability to improvise on any subject, Russell makes the stage his own personal playground and thrives on spontaneous chats with his audience, leading them down a never-ending series of unstoppably comical journeys.
 
 Star of The Comedy Zone at the 2003 Edinburgh Festival, Russell has twice toured as the special guest of Perrier Award Winner, Daniel Kitson. Fast making a name for himself as one of the exciting young guns of UK comedy, Russell returned to the Edinburgh festival in 2004 to perform his acclaimed debut solo show.
@@ -142,6 +147,7 @@ User.create(
             email: 'jimmy@carr.com',
             video: 'https://www.youtube.com/watch?v=fcDeLX_-oMk',
             user_image: open("http://comedycv.co.uk/jimmycarr/jimmy-carr-2010-october.jpg"),
+            password: '12341234',
             bio: %Q{It's fair to say that Jimmy has grown on us quite a bit. When he first 'launched' we couldn't stand the bloke, but things are looking better for hmi now in that department. He's bound to be pleased.
 
 We knew Carr was a bit posh but it was confirmed to us when we discovered that he attended Gonville and Caius College in Cambridge. We've no idea if it's actually any good but it certainly sounds like it with a name like that.
@@ -160,6 +166,7 @@ User.create(
             email: 'jack@dee.com',
             video: 'https://www.youtube.com/watch?v=mxlD1sPCvXU',
             user_image: open("http://comedycv.co.uk/jackdee/2002-october-jack-dee.jpg"),
+            password: '12341234',
             bio: %Q{Since The Jack Dee Show hit the small screen in February 1992, Jack Dee has become a household name.
 
 Born in Petts Wood and brought up in a family with a history of musical entertainers and mental illness, he left a Winchester comprehensive to start a career in catering. Realising his dour persona got more laughs
@@ -190,6 +197,7 @@ User.create(
             email: 'john@bishop.com',
             video: 'https://www.youtube.com/watch?v=-xA31VgRzNY',
             user_image: open("http://comedycv.co.uk/johnbishop/2002-october-john-bishop.jpg"),
+            password: '12341234',
             bio: %Q{John Bishop performed stand-up comedy for the first time in October 2000, within four months he was the headline act at some of the regular comedy clubs in the North of England.
 
 No two shows are ever the same with John. His engaging brand of observational humour mines his varied and colourful life experience - from fatherhood to cycling around the world, from a successful career in the corporate sector to playing semi-professional football and currently playing in the Emlyn Hughes Charity All Star team, and from working as a night club doorman to being voted by the listeners of BBC Radio Merseyside to be the person most likely to turn on the Liverpool City Christmas lights.
@@ -236,6 +244,7 @@ User.create(
             email: 'lee@evans.com',
             video: 'https://www.youtube.com/watch?v=iPWuSH529nA',
             user_image: open("http://comedycv.co.uk/leeevans/2002-october-lee-evans.jpg"),
+            password: '12341234',
             bio: %Q{"A DAZZLING COMIC GENIUS"
 
 Now established as one of Britain's best-loved and biggest comedy stars, ex-boxer Lee Evans has captured audiences' and critics' imagination with his irrepressible physicality and disarming charm.
@@ -296,6 +305,7 @@ User.create(
             email: 'peter@kay.com',
             video: 'https://www.youtube.com/watch?v=NsuZ-CDnCVY',
             user_image: open("http://comedycv.co.uk/peterkay/2002-november-peter-kay.jpg"),
+            password: '12341234',
             bio: %Q{'A brilliant stand-up comedian.' - The Times
 
 

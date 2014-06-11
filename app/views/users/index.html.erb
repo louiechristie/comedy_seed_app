@@ -1,7 +1,7 @@
-<h1>Commedians List</h1>
+<h1>Comedians List</h1>
 
 <% @users.each do |user| %>
-  <div class="commedian">
+  <div class="comedian">
     <%= link_to user do %>
       <%= image_tag user.user_image.url || "mic.svg" %>
       <%= user.name %>

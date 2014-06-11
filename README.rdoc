@@ -1,4 +1,4 @@
 == Comedy Seed App
 
-A web application for commedians to share their profile, picture, bio and video, and rate other commedians.
+A web application for comedians to share their profile, picture, bio and video, and rate other comedians.
 

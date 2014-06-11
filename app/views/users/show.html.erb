@@ -1,5 +1,6 @@
 <p id="notice"><%= notice %></p>
 <%= link_to "Edit", edit_user_path %>
+
 <h1 id="name"><%= @user.try(:name) %></h1>
 
 <div id="media">
@@ -14,6 +15,6 @@
 
 <div id="text">
   <div id="bio">
-    Bio: <%= simple_format(@user.try(:bio)) || "No biography information available." %>
+    Bio: <%= simple_format(@user.try(:bio) || "No biography information available.") %>
   </div>
 </div>
