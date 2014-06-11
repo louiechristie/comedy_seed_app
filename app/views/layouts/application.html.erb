@@ -15,9 +15,10 @@
   <p class="notice"><%= notice %></p>
   <p class="alert"><%= alert %></p>
 
+  <div id="logo"><%= link_to image_tag("comedy_seed_logo.png"), root_path %></div>
   <nav>
+    <div id="strapline">Comedian profiles on the web.</div>
     <ul>
-      <li><%= link_to image_tag("comedy_seed_logo.png"), root_path %></li>
       <li><%= link_to "Comedians", users_path %></li>
 
       <% if current_user %>
@@ -27,7 +28,6 @@
         <li><%= link_to "Sign In", new_user_session_path %></li>
         <li><%= link_to "I'm a comedian, register me.", new_user_registration_path %></li>
       <% end %>
-
 
       <li>
         <%= search_form_for @q do |f| %>

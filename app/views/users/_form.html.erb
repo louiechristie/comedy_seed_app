@@ -19,7 +19,7 @@
     </div>
     <div id="video">
       <%= f.label "Youtube video link" %>
-      <%= f.text_field :video, value: @user.try(:video) || "No video supplied." %><br />
+      <%= f.text_field :video, value: @user.try(:video) %><br />
       <%= raw(youtube_embed(@user.try(:video))) %>
     </div>
   </div>
