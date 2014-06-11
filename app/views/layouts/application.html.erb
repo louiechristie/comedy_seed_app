@@ -12,13 +12,23 @@
 
 </head>
 <body>
+  <p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p>
 
   <nav>
     <ul>
       <li><%= link_to image_tag("comedy_seed_logo.png"), root_path %></li>
       <li><%= link_to "Commedians", users_path %></li>
-      <li><%= link_to "New User", new_user_path %></li>
-      <li>Profile</li>
+
+      <% if current_user %>
+        <li><%= link_to "Profile", current_user %></li>
+        <li><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
+      <% else %>
+        <li><%= link_to "Sign In", new_user_session_path %></li>
+        <li><%= link_to "I'm a commedian, register me.", new_user_registration_path %></li>
+      <% end %>
+
+
       <li>
         <%= search_form_for @q do |f| %>
         <%= f.text_field :name_cont %>
@@ -26,6 +36,7 @@
         <% end %>
       </li>
     </ul>
+  
   </nav>
 
 <div id="container">
