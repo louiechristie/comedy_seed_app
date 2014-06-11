@@ -8,7 +8,7 @@
 
 User.create(
             name:  'Bill Bailey', 
-            email: 'bill@bailey.com',
+            email: 'billbailey@louiechristie.com',
             video: 'https://www.youtube.com/watch?v=8-xcOrgGFtA',
             user_image: open("http://www.comedycv.co.uk/billbailey/2003-january-bill-bailey.jpg"),
             password: '12341234',
@@ -35,7 +35,7 @@ The Happening (Channel 4)
 
 User.create(
             name:  'Alan Carr', 
-            email: 'alan@carr.com',
+            email: 'alancarr@louiechristie.com',
             video: 'https://www.youtube.com/watch?v=qytQnITpl8w',
             user_image: open("http://www.comedycv.co.uk/alancarr/alan-carr-2005-may.jpg"),
             password: '12341234',
@@ -59,7 +59,7 @@ Alan has featured in Baby Cow's Brain Candy on BBC3 and also as a panellist on C
 
 User.create(
             name:  'Micky Flanagan', 
-            email: 'micky@flanagan.com',
+            email: 'mickyflanagan@louiechristie.com',
             video: 'https://www.youtube.com/watch?v=IXyt6VcoUQI',
             user_image: open("http://www.comedycv.co.uk/mickyflanagan/2003-march-micky-flanagan.jpg"),
             password: '12341234',
@@ -86,7 +86,7 @@ Pick of the Week - "The rising star Micky Flanagan" - Sunday Times
 
 User.create(
             name:  'Sarah Millican', 
-            email: 'sarah@millican.com',
+            email: 'sarahmillican@louiechristie.com',
             video: 'https://www.youtube.com/watch?v=Gyuo9ZH3frE',
             user_image: open("http://www.comedycv.co.uk/sarahmillican/sarah-millican-2005-may.jpg"),
             password: '12341234',
@@ -119,7 +119,7 @@ Clubs where Sarah has performed sets between 10 and 20 min sets include The Stan
 
 User.create(
             name:  'Russell Howard', 
-            email: 'russell@howard.com',
+            email: 'russellhoward@louiechristie.com',
             video: 'https://www.youtube.com/watch?v=4wCDuJUiisU',
             user_image: open("http://www.comedycv.co.uk/russellhoward/russell-howard-2005-october.jpg"),
             password: '12341234',
@@ -144,7 +144,7 @@ What the press said:
 
 User.create(
             name:  'Jimmy Carr', 
-            email: 'jimmy@carr.com',
+            email: 'jimmycarr@louiechristie.com',
             video: 'https://www.youtube.com/watch?v=fcDeLX_-oMk',
             user_image: open("http://comedycv.co.uk/jimmycarr/jimmy-carr-2010-october.jpg"),
             password: '12341234',
@@ -163,7 +163,7 @@ Although Jimmy is engaged to his long-term girlfriend, he's admitted that he did
 
 User.create(
             name:  'Jack Dee', 
-            email: 'jack@dee.com',
+            email: 'jackdee@louiechristie.com',
             video: 'https://www.youtube.com/watch?v=mxlD1sPCvXU',
             user_image: open("http://comedycv.co.uk/jackdee/2002-october-jack-dee.jpg"),
             password: '12341234',
@@ -194,7 +194,7 @@ video or DVD in November: Jack Dee Live at the Apollo, (VVL). You may also have 
 
 User.create(
             name:  'John Bishop', 
-            email: 'john@bishop.com',
+            email: 'johnbishop@louiechristie.com',
             video: 'https://www.youtube.com/watch?v=-xA31VgRzNY',
             user_image: open("http://comedycv.co.uk/johnbishop/2002-october-john-bishop.jpg"),
             password: '12341234',
@@ -241,7 +241,7 @@ Hanover International Financial Services Annual Conference
 
 User.create(
             name:  'Lee Evans', 
-            email: 'lee@evans.com',
+            email: 'leeevans@louiechristie.com',
             video: 'https://www.youtube.com/watch?v=iPWuSH529nA',
             user_image: open("http://comedycv.co.uk/leeevans/2002-october-lee-evans.jpg"),
             password: '12341234',
@@ -302,7 +302,7 @@ Funny Bones, directed by Peter Chelsom (Hear My Song) (1995)
 
 User.create(
             name:  'Peter Kay', 
-            email: 'peter@kay.com',
+            email: 'peterkay@louiechristie.com',
             video: 'https://www.youtube.com/watch?v=NsuZ-CDnCVY',
             user_image: open("http://comedycv.co.uk/peterkay/2002-november-peter-kay.jpg"),
             password: '12341234',
