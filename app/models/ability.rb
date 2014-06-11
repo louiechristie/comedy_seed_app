@@ -17,8 +17,9 @@ class Ability
       can :manage, :all
     else
       can :read, User
+      can :update, User, id: user.id
     end
-    
+
     # The first argument to `can` is the action you are giving the user 
     # permission to do.
     # If you pass :manage it will apply to every action. Other common actions

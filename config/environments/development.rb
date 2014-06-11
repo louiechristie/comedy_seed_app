@@ -3,6 +3,10 @@ ComedySeedApp::Application.configure do
 
   # Devise mailer config
   config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+  config.action_mailer.delivery_method = :letter_opener
+  config.action_mailer.perform_deliveries = true
+  config.action_mailer.raise_delivery_errors = false
+  config.action_mailer.default :charset => "utf-8"
 
   # In the development environment your application's code is reloaded on
   # every request. This slows down response time but is perfect for development
@@ -37,4 +41,14 @@ ComedySeedApp::Application.configure do
 
   # Expands the lines which load the assets
   config.assets.debug = true
+
+  ActionMailer::Base.smtp_settings = {
+  address: "smtp.mandrillapp.com",
+  port: 587,
+  domain: "mandrillapp.com",
+  authentication: :plain,
+  user_name: ENV['MANDRIL_USERNAME'],
+  password: ENV['MANDRIL_API_KEY']
+}
+
 end
