@@ -9,6 +9,8 @@ gem 'ransack'
 gem 'carrierwave', '= 0.9.0'
 gem "fog", "~> 1.3.1"
 gem 'devise'
+gem 'cancan'
+
 
 group :development, :test do
   gem 'pry-rails'
