@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+ruby '2.0.0'
 gem 'rails', '3.2.18'
 
 # Bundle edge Rails instead:
@@ -10,6 +11,7 @@ gem 'carrierwave', '= 0.9.0'
 gem "fog", "~> 1.3.1"
 gem 'devise'
 gem 'cancan'
+gem 'friendly_id'
 
 
 group :development, :test do

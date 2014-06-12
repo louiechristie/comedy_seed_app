@@ -16,6 +16,9 @@ class User < ActiveRecord::Base
 
   mount_uploader  :user_image, UserImageUploader
 
+  extend FriendlyId
+  friendly_id :name, use: :slugged
+
   def role?(role)
     self.role.to_s == role.to_s
   end
