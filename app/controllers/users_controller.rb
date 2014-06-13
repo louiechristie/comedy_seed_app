@@ -1,14 +1,6 @@
 class UsersController < ApplicationController
 
-  load_and_authorize_resource
-  
-  def index
-    @users = @q.result(:distinct => true)
-  end
-
-  def show
-    @user = User.find params[:id]
-  end
+  # load_and_authorize_resource
 
   def edit
     @user = User.find params[:id]
@@ -17,13 +9,7 @@ class UsersController < ApplicationController
   def update
     user = User.find params[:id]
     user.update_attributes params[:user]
-    redirect_to user
-  end
-
-  def destroy
-    user = User.find params[:id]
-    user.delete
-    redirect_to users_path 
+    redirect_to edit_user_path(current_user)
   end
 
 end

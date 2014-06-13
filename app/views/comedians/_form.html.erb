@@ -1,0 +1,36 @@
+<ul class="errors">
+  <% @user.errors.full_messages.each do |error| %>
+    <li>
+      <%= error %>
+    </li> 
+  <% end %>
+</ul>
+
+<%= form_for(@user) do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name,  id: "name" %><br />
+  <%= f.label :email %>
+  <%= f.text_field :email %><br />
+  <div id="media">
+    <div id="pic">
+      <%= f.label :user_image %>
+      <%= image_tag @user.user_image.url || "mic.svg" %>
+      <%= f.file_field :user_image %><br />
+    </div>
+    <div id="video">
+      <%= f.label "Youtube video link" %>
+      <%= f.text_field :video, value: @user.try(:video) %><br />
+      <%= raw(youtube_embed(@user.try(:video))) %>
+    </div>
+  </div>
+  <div id="text">
+    <div id="bio">
+      <%= f.label "Biography" %><br />
+      <%= f.text_area :bio, value: @user.try(:bio) || "No bio supplied."%><br />
+    </div>
+  </div>
+
+
+  <p><%= f.submit id: "submit", value: "Save" %></p>
+
+<% end %>

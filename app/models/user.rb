@@ -1,20 +1,19 @@
 class User < ActiveRecord::Base
+
+  has_one :comedian
+
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
   # Setup accessible (or protected) attributes for your model
-  attr_accessible :email, :password, :password_confirmation, :remember_me
-
-
-  attr_accessible :bio, :email, :name, :video, :user_image
+  attr_accessible :name, :email, :password, :password_confirmation, :remember_me
 
   validates :email, presence: true, uniqueness: true, length: { in: 2..255 }
 
   validates :name, presence: true, length: { in: 2..255 }
 
-  mount_uploader  :user_image, UserImageUploader
 
   extend FriendlyId
   friendly_id :name, use: :slugged

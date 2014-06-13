@@ -5,7 +5,7 @@ class ApplicationController < ActionController::Base
 
   private
   def setup_search_object
-    @q = User.search(params[:q])
+    @q = Comedian.search(params[:q])
   end
 
   rescue_from CanCan::AccessDenied do |exception|
