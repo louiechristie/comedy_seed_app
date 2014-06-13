@@ -7,11 +7,12 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 bill_bailey_user = User.create(
-            name:  'Bill Bailey', 
+            username:  'Bill Bailey', 
             email: 'billbailey@louiechristie.com',
             password: '12341234')
 
 bill_bailey_comedian = Comedian.create(
+            stage_name:  'Bill Bailey', 
             user_id: bill_bailey_user.id,
             video: 'https://www.youtube.com/watch?v=8-xcOrgGFtA',
             image: open("http://www.comedycv.co.uk/billbailey/2003-january-bill-bailey.jpg"),
@@ -37,11 +38,12 @@ The Happening (Channel 4)
           )
 
 alan_car_user = User.create(
-            name:  'Alan Carr', 
+            username:  'Alan Carr', 
             email: 'alancarr@louiechristie.com',
             password: '12341234')
 
 alan_car_comedian = Comedian.create(
+            stage_name:  'Alan Carr', 
             user_id: alan_car_user.id,
             video: 'https://www.youtube.com/watch?v=qytQnITpl8w',
             image: open("http://www.comedycv.co.uk/alancarr/alan-carr-2005-may.jpg"),
@@ -64,11 +66,12 @@ Alan has featured in Baby Cow's Brain Candy on BBC3 and also as a panellist on C
           )
 
 micky_flanagan_user = User.create(
-            name:  'Micky Flanagan', 
+            username:  'Micky Flanagan', 
             email: 'mickyflanagan@louiechristie.com',
             password: '12341234')
 
 micky_flanagan_comedian = Comedian.create(
+            stage_name:  'Micky Flanagan', 
             user_id: micky_flanagan_user.id,
             video: 'https://www.youtube.com/watch?v=IXyt6VcoUQI',
             image: open("http://www.comedycv.co.uk/mickyflanagan/2003-march-micky-flanagan.jpg"),
@@ -94,11 +97,12 @@ Pick of the Week - "The rising star Micky Flanagan" - Sunday Times
           )
 
 sarah_millican_user = User.create(
-            name:  'Sarah Millican', 
+            username:  'Sarah Millican', 
             email: 'sarahmillican@louiechristie.com',
             password: '12341234')
 
 sarah_millican_comedian = Comedian.create(
+            stage_name:  'Sarah Millican', 
             user_id: sarah_millican_user.id,
             video: 'https://www.youtube.com/watch?v=Gyuo9ZH3frE',
             image: open("http://www.comedycv.co.uk/sarahmillican/sarah-millican-2005-may.jpg"),
@@ -130,11 +134,12 @@ Clubs where Sarah has performed sets between 10 and 20 min sets include The Stan
           )
 
 russell_howard_user = User.create(
-            name:  'Russell Howard', 
+            username:  'Russell Howard', 
             email: 'russellhoward@louiechristie.com',
             password: '12341234')
 
 russell_howard_comedian = Comedian.create(
+            stage_name:  'Russell Howard', 
             user_id: russell_howard_user.id,
             video: 'https://www.youtube.com/watch?v=4wCDuJUiisU',
             image: open("http://www.comedycv.co.uk/russellhoward/russell-howard-2005-october.jpg"),
@@ -158,11 +163,12 @@ What the press said:
           )
 
 jimmy_car_user = User.create(
-            name:  'Jimmy Carr', 
+            username:  'Jimmy Carr', 
             email: 'jimmycarr@louiechristie.com',
             password: '12341234')
 
 jimmy_car_comedian = Comedian.create(
+            stage_name:  'Jimmy Carr', 
             user_id: jimmy_car_user.id,
             video: 'https://www.youtube.com/watch?v=fcDeLX_-oMk',
             image: open("http://comedycv.co.uk/jimmycarr/jimmy-carr-2010-october.jpg"),
@@ -180,11 +186,12 @@ Although Jimmy is engaged to his long-term girlfriend, he's admitted that he did
           )
 
 jack_dee_user = User.create(
-            name:  'Jack Dee', 
+            username:  'Jack Dee', 
             email: 'jackdee@louiechristie.com',
             password: '12341234')
 
 jack_dee_comedian = Comedian.create(
+            stage_name:  'Jack Dee', 
             user_id: jack_dee_user.id,
             video: 'https://www.youtube.com/watch?v=mxlD1sPCvXU',
             image: open("http://comedycv.co.uk/jackdee/2002-october-jack-dee.jpg"),
@@ -214,11 +221,12 @@ video or DVD in November: Jack Dee Live at the Apollo, (VVL). You may also have 
           )
 
 john_bishop_user = User.create(
-            name:  'John Bishop', 
+            username:  'John Bishop', 
             email: 'johnbishop@louiechristie.com',
             password: '12341234')
 
 john_bishop_comedian = Comedian.create(
+            stage_name:  'John Bishop', 
             user_id: john_bishop_user.id,
             video: 'https://www.youtube.com/watch?v=-xA31VgRzNY',
             image: open("http://comedycv.co.uk/johnbishop/2002-october-john-bishop.jpg"),
@@ -264,11 +272,12 @@ Hanover International Financial Services Annual Conference
 )
 
 lee_evans_user = User.create(
-            name:  'Lee Evans', 
+            username:  'Lee Evans', 
             email: 'leeevans@louiechristie.com',
             password: '12341234')
 
 lee_evans_comedian = Comedian.create(
+            stage_name:  'Lee Evans', 
             user_id: lee_evans_user.id,
             video: 'https://www.youtube.com/watch?v=iPWuSH529nA',
             image: open("http://comedycv.co.uk/leeevans/2002-october-lee-evans.jpg"),
@@ -328,11 +337,12 @@ Funny Bones, directed by Peter Chelsom (Hear My Song) (1995)
           )
 
 peter_kay_user = User.create(
-            name:  'Peter Kay', 
+            username:  'Peter Kay', 
             email: 'peterkay@louiechristie.com',
             password: '12341234')
 
 peter_kay_comedian = Comedian.create(
+            stage_name:  'Peter Kay', 
             user_id: peter_kay_user.id,
             video: 'https://www.youtube.com/watch?v=NsuZ-CDnCVY',
             image: open("http://comedycv.co.uk/peterkay/2002-november-peter-kay.jpg"),

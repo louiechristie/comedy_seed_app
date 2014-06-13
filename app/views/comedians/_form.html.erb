@@ -6,11 +6,14 @@
   <% end %>
 </ul>
 
-<p><%= @comedian.user.name %></p>
 <p><%= @comedian.user.email %></p>
+
+<p><%= @comedian.stage_name %></p>
 
 
 <%= form_for(@comedian) do |f| %>
+      <%= f.label :stage_name %>
+      <%= f.text_field :stage_name, value: @comedian.try(:stage_name) %><br />
   
   <div id="media">
     <div id="pic">
