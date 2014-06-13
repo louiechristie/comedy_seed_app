@@ -5,6 +5,7 @@
     <%= link_to comedian do %>
       <%= image_tag comedian.image.url || "mic.svg" %>
       <%= comedian.try :stage_name %>
+      Rating: <%= comedian.avg_rating.nan? ? "" : comedian.avg_rating  %>
      <% end %>
   </div>
 <% end %>

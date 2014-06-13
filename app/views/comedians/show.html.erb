@@ -3,15 +3,16 @@
 <h1 id="name"><%= @comedian.try(:stage_name) %> <%= link_to "Edit", edit_comedian_path if @comedian == current_user %>
 </h1>
 
-<p>Your rating:</p>
 
 <% if current_user %>
+  <p>Your rating:
   <%= form_for @rating do |f| %>
     <%= f.hidden_field :user_id, value: current_user.id %>
     <%= f.hidden_field :comedian_id, value: @comedian.id %>
     <%= f.label :rating %>
     <%= f.text_field :rating, value: @rating.rating %>
     <%= f.submit %>
+  </p>
   <% end %>
 
 
