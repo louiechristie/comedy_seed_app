@@ -22,7 +22,7 @@
       <li><%= link_to "Top Rated", comedians_path %></li>
 
       <% if current_user %>
-        <li><%= link_to("Profile", current_user.comedian) if current_user.comedian %></li>
+        <li><%= link_to("Profile", edit_comedian_path(current_user.comedian)) if current_user.comedian %></li>
         <li><%= link_to "Account", edit_user_path(current_user) %></li>
         <li><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
       <% else %>

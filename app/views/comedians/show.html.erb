@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1 id="name"><%= @comedian.user.try(:name) %> <%= link_to "Edit", edit_user_path %>
+<h1 id="name"><%= @comedian.user.try(:name) %> <%= link_to "Edit", edit_comedian_path if @comedian == current_user %>
 </h1>
 
 <div id="media">

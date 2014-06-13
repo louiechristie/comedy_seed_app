@@ -1,32 +1,33 @@
 <ul class="errors">
-  <% @user.errors.full_messages.each do |error| %>
+  <% @comedian.errors.full_messages.each do |error| %>
     <li>
       <%= error %>
     </li> 
   <% end %>
 </ul>
 
-<%= form_for(@user) do |f| %>
-  <%= f.label :name %>
-  <%= f.text_field :name,  id: "name" %><br />
-  <%= f.label :email %>
-  <%= f.text_field :email %><br />
+<p><%= @comedian.user.name %></p>
+<p><%= @comedian.user.email %></p>
+
+
+<%= form_for(@comedian) do |f| %>
+  
   <div id="media">
     <div id="pic">
-      <%= f.label :user_image %>
-      <%= image_tag @user.user_image.url || "mic.svg" %>
-      <%= f.file_field :user_image %><br />
+      <%= f.label :image %>
+      <%= image_tag @comedian.image.url || "mic.svg" %>
+      <%= f.file_field :image %><br />
     </div>
     <div id="video">
       <%= f.label "Youtube video link" %>
-      <%= f.text_field :video, value: @user.try(:video) %><br />
-      <%= raw(youtube_embed(@user.try(:video))) %>
+      <%= f.text_field :video, value: @comedian.try(:video) %><br />
+      <%= raw(youtube_embed(@comedian.try(:video))) %>
     </div>
   </div>
   <div id="text">
     <div id="bio">
       <%= f.label "Biography" %><br />
-      <%= f.text_area :bio, value: @user.try(:bio) || "No bio supplied."%><br />
+      <%= f.text_area :bio, value: @comedian.try(:bio) || "No bio supplied."%><br />
     </div>
   </div>
 
