@@ -3,8 +3,8 @@ class ComediansController < ApplicationController
   # load_and_authorize_resource
   
   def index
-    @comedians = Comedian.all
-    # @comedians = @q.result(:distinct => true)
+    #@comedians = Comedian.all
+    @comedians = @q.result(:distinct => true)
   end
 
   def show
