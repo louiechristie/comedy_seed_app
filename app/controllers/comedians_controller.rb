@@ -9,6 +9,9 @@ class ComediansController < ApplicationController
 
   def show
     @comedian = Comedian.find params[:id]
+
+    @rating = current_user.rating.where(comedian_id: @comedian.id).first || Rating.new
+
   end
 
   def edit
