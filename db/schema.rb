@@ -54,7 +54,7 @@ ActiveRecord::Schema.define(:version => 20140613125122) do
   create_table "ratings", :force => true do |t|
     t.integer  "user_id"
     t.integer  "comedian_id"
-    t.integer  "rating"
+    t.integer  "score"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
   end

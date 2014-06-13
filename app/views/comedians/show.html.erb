@@ -9,13 +9,11 @@
   <%= form_for @rating do |f| %>
     <%= f.hidden_field :user_id, value: current_user.id %>
     <%= f.hidden_field :comedian_id, value: @comedian.id %>
-    <%= f.label :rating %>
-    <%= f.text_field :rating, value: @rating.rating %>
+    <%= f.label "Rating" %>
+    <%= f.text_field :score, value: @rating.score %>
     <%= f.submit %>
   </p>
   <% end %>
-
-
 
 <% end %>
 

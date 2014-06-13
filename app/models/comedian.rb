@@ -13,12 +13,11 @@ class Comedian < ActiveRecord::Base
   friendly_id :stage_name, use: :slugged
 
   def avg_rating
-    self.ratings.first.try(:rating)
 
     total = 0.0
 
     self.ratings.each do |rating|
-      total += rating.rating
+      total += rating.score
     end
 
     count = self.ratings.count
