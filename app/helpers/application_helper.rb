@@ -1,8 +1,7 @@
 module ApplicationHelper
 
   def youtube_embed(youtube_url)
-  youtube_url = "https://www.youtube.com/watch?v=ScMzIvxBSi4&feature=kp" if youtube_url == nil
-
+    return nil if youtube_url == nil
 
   if youtube_url[/youtu\.be\/([^\?]*)/]
     youtube_id = $1

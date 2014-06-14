@@ -15,6 +15,7 @@ class User < ActiveRecord::Base
   validates :username, presence: true, uniqueness: true, length: { in: 2..255 }
 
   after_create :create_comedian
+  after_update :update_comedian
 
   def role?(role)
     self.role.to_s == role.to_s
@@ -30,6 +31,19 @@ class User < ActiveRecord::Base
       @comedian.user_id = self.id
       @comedian.stage_name = self.username
       @comedian.save   
+    end
+  end
+
+  def update_comedian
+    if self.is_comedian? && !self.comedian
+        @comedian = Comedian.new
+        @comedian.user_id = self.id
+        @comedian.stage_name = self.username
+        @comedian.save  
+    end
+
+    if !self.is_comedian && self.comedian
+        self.comedian.destroy
     end
   end
 
