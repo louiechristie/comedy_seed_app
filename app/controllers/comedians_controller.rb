@@ -1,6 +1,4 @@
 class ComediansController < ApplicationController
-
-  # load_and_authorize_resource
   
   def index
     @comedians = @q.result(:distinct => true)
@@ -18,15 +16,15 @@ class ComediansController < ApplicationController
   end
 
   def update
-    user = Comedian.find params[:id]
-    user.update_attributes params[:user]
-    redirect_to user
+    comedian = Comedian.find params[:id]
+    comedian.update_attributes params[:comedian]
+    redirect_to comedian
   end
 
   def destroy
-    user = Comedian.find params[:id]
-    user.delete
-    redirect_to users_path 
+    comedian = Comedian.find params[:id]
+    comedian.delete
+    redirect_to comedians_path 
   end
 
 end

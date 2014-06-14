@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140613125122) do
+ActiveRecord::Schema.define(:version => 20140614193939) do
 
   create_table "comedians", :force => true do |t|
     t.text     "bio"
@@ -75,6 +75,7 @@ ActiveRecord::Schema.define(:version => 20140613125122) do
     t.string   "last_sign_in_ip"
     t.string   "role"
     t.string   "slug"
+    t.boolean  "is_comedian"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true

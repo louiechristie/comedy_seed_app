@@ -6,16 +6,19 @@
   <% end %>
 </ul>
 
-<%= form_for(@user) do |f| %>
+<%= form_for(@user, id: :id) do |f| %>
   <%= f.label :username %>
-  <%= f.text_field :username,  id: "name" %><br />
+  <%= f.text_field :username %><br />
   <%= f.label :email %>
   <%= f.text_field :email %><br />
   <%= f.label :password %>
   <%= f.password_field :password %><br />
   <%= f.label :password_confirmation %>
-  <%= f.password_field :password_confirmation %>
-
-  <p><%= f.submit id: "submit", value: "Save" %></p>
+  <%= f.password_field :password_confirmation %><br />
+  <%= f.label "I'm a comedian, create a comedian profile page." %>
+  <%= f.radio_button :is_comedian, true, :value => true %><br />
+  <%= f.label "I'm not a comedian, don't create a comedian profile page." %>
+<%= f.radio_button :is_comedian, false , :checked => true , :value => false %><br />
+  <%= f.submit id: "submit", value: "Save" %>
 
 <% end %>

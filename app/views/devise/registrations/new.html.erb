@@ -9,6 +9,13 @@
   <div><%= f.label :email %><br />
   <%= f.email_field :email %></div>
 
+  <%= f.label "I'm a comedian, create a profile page." %>
+  <%= f.radio_button :is_comedian, true, :value => true %><br />
+  <%= f.label "I'm not a comedian, don't create profile page." %>
+  <%= f.radio_button :is_comedian, false , :checked => true , :value => false %><br />
+
+  <hr>
+
   <div><%= f.label :password %><br />
     <%= f.password_field :password, autocomplete: "off" %></div>
 
