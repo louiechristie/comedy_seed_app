@@ -1,5 +1,7 @@
 class RatingsController < ApplicationController
 
+  load_and_authorize_resource
+
   def create
 
     @comedian = Comedian.find(params[:rating].fetch(:comedian_id))

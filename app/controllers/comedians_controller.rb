@@ -1,14 +1,14 @@
 class ComediansController < ApplicationController
   
+  #load_and_authorize_resource
+
   def index
     @comedians = @q.result(:distinct => true)
   end
 
   def show
     @comedian = Comedian.find params[:id]
-
     @rating = current_user.rating.where(comedian_id: @comedian.id).first || Rating.new if current_user
-
   end
 
   def edit

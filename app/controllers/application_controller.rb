@@ -3,8 +3,6 @@ class ApplicationController < ActionController::Base
 
   before_filter :setup_search_object
 
-  # load_and_authorize_resource
-
   private
   def setup_search_object
     @q = Comedian.search(params[:q])

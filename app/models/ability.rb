@@ -16,8 +16,15 @@ class Ability
     if user.role? :admin
       can :manage, :all
     else
-      can :read, User
+      can :read, User, id: user.id
       can :update, User, id: user.id
+
+      can :read, Comedian, :all
+      can :manage, Comedian, user_id: user.id
+
+      can :read, Rating, :all
+      can :manage, Rating, user_id: user.id
+
     end
 
     # The first argument to `can` is the action you are giving the user 
