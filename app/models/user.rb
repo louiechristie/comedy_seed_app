@@ -1,7 +1,9 @@
 class User < ActiveRecord::Base
 
   has_one :comedian
-  has_many :rating
+  has_many :ratings
+  has_many :reviews
+
 
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
@@ -41,7 +43,6 @@ class User < ActiveRecord::Base
         @comedian.stage_name = self.username
         @comedian.save  
     end
-
     if !self.is_comedian && self.comedian
         self.comedian.destroy
     end

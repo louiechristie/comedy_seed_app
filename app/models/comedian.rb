@@ -2,6 +2,7 @@ class Comedian < ActiveRecord::Base
 
   belongs_to :user
   has_many :ratings
+  has_many :reviews
 
   attr_accessible :bio, :image, :user_id, :video, :stage_name
 

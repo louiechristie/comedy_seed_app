@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140614193939) do
+ActiveRecord::Schema.define(:version => 20140615142251) do
 
   create_table "comedians", :force => true do |t|
     t.text     "bio"
@@ -25,6 +25,21 @@ ActiveRecord::Schema.define(:version => 20140614193939) do
   end
 
   add_index "comedians", ["slug"], :name => "index_comedians_on_slug"
+
+  create_table "flaggings", :force => true do |t|
+    t.string   "flaggable_type"
+    t.integer  "flaggable_id"
+    t.string   "flagger_type"
+    t.integer  "flagger_id"
+    t.string   "flag"
+    t.datetime "created_at",     :null => false
+    t.datetime "updated_at",     :null => false
+  end
+
+  add_index "flaggings", ["flag", "flaggable_type", "flaggable_id"], :name => "index_flaggings_on_flag_and_flaggable_type_and_flaggable_id"
+  add_index "flaggings", ["flag", "flagger_type", "flagger_id", "flaggable_type", "flaggable_id"], :name => "access_flag_flaggings"
+  add_index "flaggings", ["flaggable_type", "flaggable_id"], :name => "index_flaggings_on_flaggable_type_and_flaggable_id"
+  add_index "flaggings", ["flagger_type", "flagger_id", "flaggable_type", "flaggable_id"], :name => "access_flaggings"
 
   create_table "rates", :force => true do |t|
     t.integer  "rater_id"
@@ -55,6 +70,14 @@ ActiveRecord::Schema.define(:version => 20140614193939) do
     t.integer  "user_id"
     t.integer  "comedian_id"
     t.integer  "score"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
+  create_table "reviews", :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "comedian_id"
+    t.text     "content"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
   end

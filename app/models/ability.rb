@@ -25,6 +25,9 @@ class Ability
       can :read, Rating
       can :manage, Rating, user_id: user.id
 
+      # can :read, Review
+      # can :manage, Review, user_id: user.id
+
     end
 
     # The first argument to `can` is the action you are giving the user 
