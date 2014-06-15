@@ -19,10 +19,10 @@ class Ability
       can :read, User, id: user.id
       can :update, User, id: user.id
 
-      can :read, Comedian, :all
+      can :read, Comedian
       can :manage, Comedian, user_id: user.id
 
-      can :read, Rating, :all
+      can :read, Rating
       can :manage, Rating, user_id: user.id
 
     end

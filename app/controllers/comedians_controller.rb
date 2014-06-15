@@ -1,6 +1,6 @@
 class ComediansController < ApplicationController
   
-  #load_and_authorize_resource
+  load_and_authorize_resource
 
   def index
     @comedians = @q.result(:distinct => true)
