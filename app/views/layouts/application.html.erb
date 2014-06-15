@@ -20,6 +20,7 @@
     <div id="strapline">Watch, rate and review new comedians.</div>
     <ul>
       <li><%= link_to "Top Rated", comedians_path %></li>
+      <li><%= link_to "Newest", newest_comedians_path %></li>
 
       <% if current_user %>
         <li><%= link_to("Profile", edit_comedian_path(current_user.comedian)) if current_user.comedian %></li>

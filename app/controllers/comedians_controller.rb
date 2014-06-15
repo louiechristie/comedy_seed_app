@@ -3,11 +3,20 @@ class ComediansController < ApplicationController
   load_and_authorize_resource
 
   def index
-    @comedians = @q.result(:distinct => true)
-    @comedians_with_ratings = @comedians.select { |comedian| !comedian.avg_rating.nan? } 
-    @comedians_without_ratings = @comedians.select { |comedian| comedian.avg_rating.nan? } 
-    @comedians = @comedians_with_ratings.sort_by!{|comedian| comedian.avg_rating}.reverse!
+    search_result = @q.result(:distinct => true)
+    @comedians_with_ratings = search_result.select { |comedian| !comedian.avg_rating.nan? }.sort_by!{|comedian| comedian.avg_rating}.reverse!
+    @comedians_without_ratings = search_result.select { |comedian| comedian.avg_rating.nan? } 
     @comedians = @comedians_with_ratings.concat @comedians_without_ratings
+  end
+
+  def newest
+    @comedians = @q.result(:distinct => true).reverse!
+    render(:action => 'newest')
+  end
+
+  def detailed
+    # full_details is a scope that eager-loads all the associations
+    respond_with Product.full_details
   end
 
   def show
