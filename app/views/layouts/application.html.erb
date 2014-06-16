@@ -19,7 +19,7 @@
   <nav>
     <div id="strapline">Watch, rate and review new comedians.</div>
     <ul>
-      <li><%= link_to "Top Rated", comedians_path %></li>
+      <li><%= link_to "Top Rated", top_comedians_path %></li>
       <li><%= link_to "Newest", newest_comedians_path %></li>
 
       <% if current_user %>
@@ -33,7 +33,7 @@
 
       <li>
         <%= search_form_for @q do |f| %>
-          <%= f.text_field :stage_name_cont %>
+          <%= f.text_field :stage_name_or_bio_cont %>
           <%= f.submit %>
         <% end %>      
       </li>
