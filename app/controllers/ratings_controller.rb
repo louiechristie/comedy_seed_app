@@ -21,7 +21,7 @@ class RatingsController < ApplicationController
     rating = Rating.find params[:id]
 
     unless rating.update_attributes params[:rating]
-      flash[:alert] = "Could not make rating due to the following errors:" + @rating.errors.full_messages.to_sentence
+      flash[:alert] = "Could not make rating due to the following errors: " + rating.errors.full_messages.to_sentence
     end
 
     redirect_to @comedian

@@ -65,3 +65,6 @@ nav, nav ul {
 #reviews text_area {
   width: 100%;
 }
+.username {
+  color: blue;
+}

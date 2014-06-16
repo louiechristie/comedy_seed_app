@@ -25,8 +25,8 @@ class Ability
       can :read, Rating
       can :manage, Rating, user_id: user.id
 
-      # can :read, Review
-      # can :manage, Review, user_id: user.id
+      can :read, Review
+      can :manage, Review, user_id: user.id
 
     end
 

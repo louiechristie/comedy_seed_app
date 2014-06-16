@@ -1,5 +1,11 @@
 <div class="review">
-  <p>Username: <%= review.user.username %> Date:  <%= l review.created_at %></p>
-  <p>Review: </p>
-  <p><%= review.content %> </p>
+  <p>
+    <span class="username">
+      <%= review.user.comedian ?  link_to(review.user.username, review.user.comedian) : review.user.username  %>
+    </span>
+    <span class="date">
+      <%= time_ago_in_words(review.created_at)+" ago." %>
+    </span>
+  </p>
+  <p><%= simple_format(review.content) %> </p>
 </div>

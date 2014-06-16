@@ -1,0 +1,10 @@
+<% if current_user %>
+    <%= form_for @rating do |f| %>
+      <%= f.hidden_field :user_id, value: current_user.id %>
+      <%= f.hidden_field :comedian_id, value: @comedian.id %>
+      <%= f.label "Your Rating 1-5*" %>
+      <%= f.text_field :score, value: @rating.score %>
+      <%= f.submit value: "submit" %>
+    <% end %>
+  <% end %>
+  Average rating: <%= @comedian.avg_rating.nan? ? "no votes" : @comedian.avg_rating.to_s+"*"  %>

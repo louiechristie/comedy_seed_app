@@ -4,16 +4,7 @@
 </h1>
 
 <div id="rating">
-  <% if current_user %>
-    <%= form_for @rating do |f| %>
-      <%= f.hidden_field :user_id, value: current_user.id %>
-      <%= f.hidden_field :comedian_id, value: @comedian.id %>
-      <%= f.label "Your Rating" %>
-      <%= f.text_field :score, value: @rating.score %>
-      <%= f.submit %>
-    <% end %>
-  <% end %>
-  Average rating: <%= @comedian.avg_rating.nan? ? "no votes" : @comedian.avg_rating  %>
+  <%= render @rating %>
 </div>
 
 <div id="media">

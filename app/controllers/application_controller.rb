@@ -9,7 +9,12 @@ class ApplicationController < ActionController::Base
   end
 
   rescue_from CanCan::AccessDenied do |exception|
-    redirect_to root_url , alert: "You can't access this page"
+    if !current_user
+      flash[:alert] = "You must be logged in to do that."
+    else
+      flash[:alert] = exception.to_s
+    end
+    redirect_to root_url
   end
 
 end
