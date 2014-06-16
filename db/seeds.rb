@@ -9,11 +9,11 @@
 bill_bailey_user = User.create(
             username:  'Bill Bailey', 
             email: 'billbailey@louiechristie.com',
+            is_comedian: true,
             password: '12341234')
 
-bill_bailey_comedian = Comedian.create(
+bill_bailey_user.comedian.update_attributes({
             stage_name:  'Bill Bailey', 
-            user_id: bill_bailey_user.id,
             video: 'https://www.youtube.com/watch?v=8-xcOrgGFtA',
             image: open("http://www.comedycv.co.uk/billbailey/2003-january-bill-bailey.jpg"),
             bio: %Q{Bill Bailey’s career has gone from strength to strength from being the founder member of The Rubber Bishops in 1989 to performing nationally in concert halls on his own one man tour.
@@ -35,16 +35,16 @@ The Happening (Channel 4)
 "Hugely funny...highly talented" - Time Out
 
 "Frequently hilarious and a damn good guitarist" - The Guardian'}
-          )
+          })
 
 alan_car_user = User.create(
             username:  'Alan Carr', 
             email: 'alancarr@louiechristie.com',
+            is_comedian: true,
             password: '12341234')
 
-alan_car_comedian = Comedian.create(
+alan_car_user.comedian.update_attributes({
             stage_name:  'Alan Carr', 
-            user_id: alan_car_user.id,
             video: 'https://www.youtube.com/watch?v=qytQnITpl8w',
             image: open("http://www.comedycv.co.uk/alancarr/alan-carr-2005-may.jpg"),
             bio: %Q{"Alan Carr is the spiritual son of Frankie Howerd." City Life Magazine
@@ -63,16 +63,16 @@ Alan has featured in Baby Cow's Brain Candy on BBC3 and also as a panellist on C
 'The most exciting and most talked about comedian on the live comedy circuit today' The Sunday Herald
 
 'Sharp, sassy material with pitch perfect comic timing' The List}
-          )
+          })
 
 micky_flanagan_user = User.create(
             username:  'Micky Flanagan', 
             email: 'mickyflanagan@louiechristie.com',
+            is_comedian: true,
             password: '12341234')
 
-micky_flanagan_comedian = Comedian.create(
+micky_flanagan_user.comedian.update_attributes({
             stage_name:  'Micky Flanagan', 
-            user_id: micky_flanagan_user.id,
             video: 'https://www.youtube.com/watch?v=IXyt6VcoUQI',
             image: open("http://www.comedycv.co.uk/mickyflanagan/2003-march-micky-flanagan.jpg"),
             bio: %Q{A professional stand-up since 1997, Micky Flanagan draws on his East End background as he ruthlessly deconstructs the Cockney myth with razor-sharp observational wit. He tells a comic tale of a working class upbringing, where alphabetti spaghetti is a luxury. Micky has come a long way since then, thanks to a university education, and he is now that rare delight - an intellectual Cockney.
@@ -94,16 +94,16 @@ Pick of the Week - "The rising star Micky Flanagan" - Sunday Times
 "The charming Micky Flanagan ended the show with a popular set, very confident and even enigmatic, he uses pace and silence with skill and has a strong physicality." - The Stage
 
 "Micky is the very embodiment of the cheeky, chirpy Cockney, and his chatty, effervescent delivery engages the most reticent of rooms. The infectious energy is also heightened by his exaggerated, almost camp, reactions. It all makes for a rambunctious set that's sometimes rude, sometimes thoughtful, but rarely short of hilarious. Recommended." Chortle.co.uk}
-          )
+          })
 
 sarah_millican_user = User.create(
             username:  'Sarah Millican', 
             email: 'sarahmillican@louiechristie.com',
+            is_comedian: true,
             password: '12341234')
 
-sarah_millican_comedian = Comedian.create(
+sarah_millican_user.comedian.update_attributes({
             stage_name:  'Sarah Millican', 
-            user_id: sarah_millican_user.id,
             video: 'https://www.youtube.com/watch?v=Gyuo9ZH3frE',
             image: open("http://www.comedycv.co.uk/sarahmillican/sarah-millican-2005-may.jpg"),
             bio: %Q{Winner - Amused Moose Comedy Awards 2005
@@ -131,16 +131,16 @@ A regular at the Funny Bones Comedy Clubs, Stand Up Live and various gigs around
 
 
 Clubs where Sarah has performed sets between 10 and 20 min sets include The Stand, HI FI Club, Funny Bones, The Other Side, Comedy Junction and Mirth Control. She has performed 50 gigs and has over 50 booked including The Comedy Store, Covent Garden Comedy Club, Laugh @ Ginglik, XS Malarkey, The Frog and Bucket, Just Laugh and gigs for CK Productions and Agraman.}
-          )
+          })
 
 russell_howard_user = User.create(
             username:  'Russell Howard', 
             email: 'russellhoward@louiechristie.com',
+            is_comedian: true,
             password: '12341234')
 
-russell_howard_comedian = Comedian.create(
+russell_howard_user.comedian.update_attributes({
             stage_name:  'Russell Howard', 
-            user_id: russell_howard_user.id,
             video: 'https://www.youtube.com/watch?v=4wCDuJUiisU',
             image: open("http://www.comedycv.co.uk/russellhoward/russell-howard-2005-october.jpg"),
             bio: %Q{An instant hit with his innate ability to improvise on any subject, Russell makes the stage his own personal playground and thrives on spontaneous chats with his audience, leading them down a never-ending series of unstoppably comical journeys.
@@ -160,16 +160,16 @@ What the press said:
 "He has the ability to riff joyfully on anything and everything around him" - The Scotsman
 
 "An adorable talent…quick witted, flippant and very funny" - Three Weeks}
-          )
+          })
 
 jimmy_car_user = User.create(
             username:  'Jimmy Carr', 
             email: 'jimmycarr@louiechristie.com',
+            is_comedian: true,
             password: '12341234')
 
-jimmy_car_comedian = Comedian.create(
+jimmy_car_user.comedian.update_attributes({
             stage_name:  'Jimmy Carr', 
-            user_id: jimmy_car_user.id,
             video: 'https://www.youtube.com/watch?v=fcDeLX_-oMk',
             image: open("http://comedycv.co.uk/jimmycarr/jimmy-carr-2010-october.jpg"),
             bio: %Q{It's fair to say that Jimmy has grown on us quite a bit. When he first 'launched' we couldn't stand the bloke, but things are looking better for hmi now in that department. He's bound to be pleased.
@@ -183,16 +183,16 @@ Jimmy has been the face of a number of TV shows, fronting Channel 4 quiz 'Your F
 Jimmy made a teeny bit of history by being the first relatively-well-known-comedian to perform a show in the virtual world, Second Life. A massive success, Jimmy has hinted that there may be future shows to follow.
 
 Although Jimmy is engaged to his long-term girlfriend, he's admitted that he didn't lose his virginity until the age of 26 because of some strict religious beliefs he held.}
-          )
+          })
 
 jack_dee_user = User.create(
             username:  'Jack Dee', 
             email: 'jackdee@louiechristie.com',
+            is_comedian: true,
             password: '12341234')
 
-jack_dee_comedian = Comedian.create(
+jack_dee_user.comedian.update_attributes({
             stage_name:  'Jack Dee', 
-            user_id: jack_dee_user.id,
             video: 'https://www.youtube.com/watch?v=mxlD1sPCvXU',
             image: open("http://comedycv.co.uk/jackdee/2002-october-jack-dee.jpg"),
             bio: %Q{Since The Jack Dee Show hit the small screen in February 1992, Jack Dee has become a household name.
@@ -218,16 +218,16 @@ And in between times, Jack has brought the house down on numerous sell-out tours
 
 Jack survived Celebrity Big Brother. So far this year, Jack has completed over 100 dates on his UK tour. His finale was two sell-out nights at the Hammersmith Apollo. If you missed it, you'll be able to buy it on
 video or DVD in November: Jack Dee Live at the Apollo, (VVL). You may also have spotted Jack on Celebrity Big Brother for Comic Relief. To Jack's surprise, he not only survived the week and the company of Anthea Turner, Vanessa Feltz and Chris Eubank, he came away with the coveted title as the last to leave the house. Later this year you will see Jack facing yet another challenge, surviving in the frozen wastes of Siberia with only a herd of reindeer for company in Celebrity Alone (BBC1) to be screened in December.}
-          )
+          })
 
 john_bishop_user = User.create(
             username:  'John Bishop', 
             email: 'johnbishop@louiechristie.com',
+            is_comedian: true,
             password: '12341234')
 
-john_bishop_comedian = Comedian.create(
+john_bishop_user.comedian.update_attributes({
             stage_name:  'John Bishop', 
-            user_id: john_bishop_user.id,
             video: 'https://www.youtube.com/watch?v=-xA31VgRzNY',
             image: open("http://comedycv.co.uk/johnbishop/2002-october-john-bishop.jpg"),
             bio: %Q{John Bishop performed stand-up comedy for the first time in October 2000, within four months he was the headline act at some of the regular comedy clubs in the North of England.
@@ -266,19 +266,17 @@ Hanover International Financial Services Annual Conference
 
 "A great act and we would love to have him back..." - The Baghdad Times
 
-"The level of popularity that Bishop elicits is because, from the very beginning, he's shown spontaneity rarely seen in someone of his experience. "I just do the stuff that's in my head, but there's a little bit of structure to it. Though Steve Harris (comedian) said to me once 'I like it when I'm watching you because there are times that you almost die.'" City Life
-
-}
-)
+"The level of popularity that Bishop elicits is because, from the very beginning, he's shown spontaneity rarely seen in someone of his experience. "I just do the stuff that's in my head, but there's a little bit of structure to it. Though Steve Harris (comedian) said to me once 'I like it when I'm watching you because there are times that you almost die.'" City Life}
+      })
 
 lee_evans_user = User.create(
             username:  'Lee Evans', 
             email: 'leeevans@louiechristie.com',
+            is_comedian: true,
             password: '12341234')
 
-lee_evans_comedian = Comedian.create(
+lee_evans_user.comedian.update_attributes({
             stage_name:  'Lee Evans', 
-            user_id: lee_evans_user.id,
             video: 'https://www.youtube.com/watch?v=iPWuSH529nA',
             image: open("http://comedycv.co.uk/leeevans/2002-october-lee-evans.jpg"),
             bio: %Q{"A DAZZLING COMIC GENIUS"
@@ -334,20 +332,20 @@ The Fifth Element with Bruce Willis and Gary Oldman. (1997)
 
 Funny Bones, directed by Peter Chelsom (Hear My Song) (1995)
 }
-          )
+          })
 
 peter_kay_user = User.create(
             username:  'Peter Kay', 
             email: 'peterkay@louiechristie.com',
+            is_comedian: true,
             password: '12341234')
 
-peter_kay_comedian = Comedian.create(
+peter_kay_user.comedian.update_attributes({
             stage_name:  'Peter Kay', 
-            user_id: peter_kay_user.id,
             video: 'https://www.youtube.com/watch?v=NsuZ-CDnCVY',
             image: open("http://comedycv.co.uk/peterkay/2002-november-peter-kay.jpg"),
             bio: %Q{'A brilliant stand-up comedian.' - The Times
 
 
 Peter Kay, the multi award-winning star of the Channel Four hit TV series Phoenix Night's and That Peter Kay Thing, embarks on his latest UK stand-up tour. His critically acclaimed 1999 tour of the North East was a sell-out success and the subsequent video release Peter Kay Live At The Top Of The Tower, became a best-seller. Peter's unique brand of stand-up has attracted a massive following and won him a prestigious Perrier Award nomination and a British Comedy Award.}
-          )
+          })

@@ -9,6 +9,8 @@ class Comedian < ActiveRecord::Base
   mount_uploader  :image, ImageUploader
 
   validates :stage_name, presence: true, uniqueness: true, length: { in: 2..255 }
+  validates :bio, length: { maximum: 8000 }
+  validates :video, length: { maximum: 255 }
 
   extend FriendlyId
   friendly_id :stage_name, use: :slugged

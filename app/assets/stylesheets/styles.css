@@ -55,6 +55,12 @@ nav, nav ul {
 .review {
   border: 1px solid black;
 }
+.your_review {
+  width: 100%;
+}
+.your_review text_area {
+  width: 100%;
+}
 
 #reviews text_area {
   width: 100%;
