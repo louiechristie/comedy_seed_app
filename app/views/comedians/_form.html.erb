@@ -6,8 +6,6 @@
   <% end %>
 </ul>
 
-<p><%= @comedian.user.email %></p>
-
 <%= form_for(@comedian) do |f| %>
       <%= f.label :stage_name %>
       <%= f.text_field :stage_name, value: @comedian.try(:stage_name) %><br />

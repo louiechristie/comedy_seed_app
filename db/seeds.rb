@@ -7,7 +7,7 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 bill_bailey_user = User.create(
-            username:  'Bill Bailey', 
+            username:  'billbailey', 
             email: 'billbailey@louiechristie.com',
             is_comedian: true,
             password: '12341234')
@@ -38,7 +38,7 @@ The Happening (Channel 4)
           })
 
 alan_car_user = User.create(
-            username:  'Alan Carr', 
+            username:  'Alan.Carr', 
             email: 'alancarr@louiechristie.com',
             is_comedian: true,
             password: '12341234')
@@ -66,7 +66,7 @@ Alan has featured in Baby Cow's Brain Candy on BBC3 and also as a panellist on C
           })
 
 micky_flanagan_user = User.create(
-            username:  'Micky Flanagan', 
+            username:  'Micky_Flanagan', 
             email: 'mickyflanagan@louiechristie.com',
             is_comedian: true,
             password: '12341234')
@@ -97,7 +97,7 @@ Pick of the Week - "The rising star Micky Flanagan" - Sunday Times
           })
 
 sarah_millican_user = User.create(
-            username:  'Sarah Millican', 
+            username:  'Sarah_Millican', 
             email: 'sarahmillican@louiechristie.com',
             is_comedian: true,
             password: '12341234')
@@ -134,7 +134,7 @@ Clubs where Sarah has performed sets between 10 and 20 min sets include The Stan
           })
 
 russell_howard_user = User.create(
-            username:  'Russell Howard', 
+            username:  'RussellHoward', 
             email: 'russellhoward@louiechristie.com',
             is_comedian: true,
             password: '12341234')
@@ -163,7 +163,7 @@ What the press said:
           })
 
 jimmy_car_user = User.create(
-            username:  'Jimmy Carr', 
+            username:  'JimmyCarr', 
             email: 'jimmycarr@louiechristie.com',
             is_comedian: true,
             password: '12341234')
@@ -186,7 +186,7 @@ Although Jimmy is engaged to his long-term girlfriend, he's admitted that he did
           })
 
 jack_dee_user = User.create(
-            username:  'Jack Dee', 
+            username:  'JackDee', 
             email: 'jackdee@louiechristie.com',
             is_comedian: true,
             password: '12341234')
@@ -221,7 +221,7 @@ video or DVD in November: Jack Dee Live at the Apollo, (VVL). You may also have 
           })
 
 john_bishop_user = User.create(
-            username:  'John Bishop', 
+            username:  'JohnBishop', 
             email: 'johnbishop@louiechristie.com',
             is_comedian: true,
             password: '12341234')
@@ -270,7 +270,7 @@ Hanover International Financial Services Annual Conference
       })
 
 lee_evans_user = User.create(
-            username:  'Lee Evans', 
+            username:  'LeeEvans', 
             email: 'leeevans@louiechristie.com',
             is_comedian: true,
             password: '12341234')
@@ -335,7 +335,7 @@ Funny Bones, directed by Peter Chelsom (Hear My Song) (1995)
           })
 
 peter_kay_user = User.create(
-            username:  'Peter Kay', 
+            username:  'peter_kay', 
             email: 'peterkay@louiechristie.com',
             is_comedian: true,
             password: '12341234')

@@ -1,12 +1,10 @@
 class User < ActiveRecord::Base
 
-  has_one :comedian
-  has_many :ratings
-  has_many :reviews
+  has_one :comedian, dependent: :destroy
+  has_many :ratings, dependent: :destroy
+  has_many :reviews, dependent: :destroy
 
   accepts_nested_attributes_for :comedian
-
-
 
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
@@ -18,7 +16,21 @@ class User < ActiveRecord::Base
 
   validates :email, presence: true, uniqueness: true, length: { in: 2..255 }
   validates :username, presence: true, uniqueness: true, length: { in: 2..255 }
-  
+  validates :username, presence: true, format: { with: /\A(?=.{2,20}$)(?![_.])(?!.*[_.]{2})[a-zA-Z0-9._]+(?<![_.])\Z/ }
+
+#^(?=.{2,20}$)(?![_.])(?!.*[_.]{2})[a-zA-Z0-9._]+(?<![_.])$
+# └─────┬────┘└───┬──┘└─────┬─────┘└─────┬─────┘ └───┬───┘
+#       │         │         │            │           no _ or . at the end
+#       │         │         │            │
+#       │         │         │            allowed characters
+#       │         │         │
+#       │         │         no __ or _. or ._ or .. inside
+#       │         │
+#       │         no _ or . at the beginning
+#       │
+#       username is 2-20 characters long
+
+  validates_inclusion_of :is_comedian, :in => [true, false]
 
   after_create :create_comedian
   after_update :update_comedian
@@ -42,13 +54,13 @@ class User < ActiveRecord::Base
 
   def update_comedian
     if self.is_comedian? && !self.comedian
-        @comedian = Comedian.new
-        @comedian.user_id = self.id
-        @comedian.stage_name = self.username
-        @comedian.save  
+      @comedian = Comedian.new
+      @comedian.user_id = self.id
+      @comedian.stage_name = self.username
+      @comedian.save  
     end
     if !self.is_comedian && self.comedian
-        self.comedian.destroy
+      self.comedian.destroy
     end
   end
 

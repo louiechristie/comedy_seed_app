@@ -17,6 +17,7 @@ ComedySeedApp::Application.routes.draw do
      resources :comedians do
        collection do
          get 'newest'
+         get 'top'
       end
     end
 
