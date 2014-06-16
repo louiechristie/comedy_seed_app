@@ -12,7 +12,7 @@ body {
 
 nav {
   padding: 2px;
-  font-family: 'Short Stack', cursive;
+  font-family: 'Short Stack', Helvetica;
   vertical-align: top;
 }
 
@@ -31,7 +31,6 @@ nav li, form {
 h1 {
   margin: 0;
   padding-left: 10px;
-  font-family: 'Short Stack', Helvetica;
 }
 #name {
   display: inline-block;
