@@ -13,3 +13,12 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
+
+
+$(function() {
+
+  $('#comedian_search_form_field').on('keyup', function() {
+    $('#comedian_search_form').submit();
+  });
+
+});

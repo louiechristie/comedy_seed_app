@@ -3,10 +3,7 @@
 <head>
   <title>Comedy Seed</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
-
   <%= stylesheet_link_tag 'http://fonts.googleapis.com/css?family=Short+Stack' %>
-
-
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 
@@ -32,8 +29,8 @@
       <% end %>
 
       <li>
-        <%= search_form_for @q do |f| %>
-          <%= f.text_field :stage_name_or_bio_cont %>
+        <%= search_form_for @q, id: :comedian_search_form, remote: true do |f| %>
+          <%= f.text_field :stage_name_or_bio_cont, id: :comedian_search_form_field %>
           <%= f.submit %>
         <% end %>      
       </li>
