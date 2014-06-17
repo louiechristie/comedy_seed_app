@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Comedy Seed</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= stylesheet_link_tag 'http://fonts.googleapis.com/css?family=Short+Stack' %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+
+</head>
+<body>
+  <p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p>
+
+  <div id="logo"><%= link_to image_tag("comedy_seed_logo.png"), root_path %></div>
+  <nav>
+    <div id="strapline">Watch, rate and review new comedians.</div>
+    <ul>
+      <li><%= link_to "Top Rated", top_comedians_path %></li>
+      <li><%= link_to "Newest", newest_comedians_path %></li>
+
+      <% if current_user %>
+        <li><%= link_to("Profile", edit_comedian_path(current_user.comedian)) if current_user.comedian %></li>
+        <li><%= link_to "Account", edit_user_registration_path %></li>
+        <li><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
+      <% else %>
+        <li><%= link_to "Sign In", new_user_session_path %></li>
+        <li><%= link_to "Sign Up", new_user_registration_path %></li>
+      <% end %>
+
+      <li>
+        <%= search_form_for @q, id: :comedian_search_form, remote: true do |f| %>
+          <%= f.text_field :stage_name_or_bio_cont, id: :comedian_search_form_field %>
+          <%= f.submit %>
+        <% end %>      
+      </li>
+    </ul>
+  
+  </nav>
+
+<div id="container">
+
+<%= yield %>
+
+</div>
+
+</body>
+</html>

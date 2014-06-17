@@ -13,6 +13,7 @@ gem 'devise'
 gem 'cancan'
 gem 'friendly_id'
 gem 'make_flaggable', :git => 'git://github.com/ScottyGams/make_flaggable.git'
+gem 'foundation-rails'
 
 group :development, :test do
   gem 'pry-rails'

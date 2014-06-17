@@ -1,154 +1,91 @@
-/*Header and navigation*/
 
-body {
-  font-family: Helvetica;
+.comedian {
+  display: inline-block;
+  margin: 10px;
 }
+.comedian_thumb img {
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  display: inline-block;
+
+}
+
+.name_and_rating {
+  text-align: center;
+}
+
+
+#ransack_submit {
+display: inline-block;
+}
+
+#ransack_search {
+  width: 70%;
+  display: inline-block;
+}
+
 
 #container {
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
-#container, nav {
-  background-color: white
-}
-
-header {
-  border-bottom: 1px dotted black;
-}
-
-nav {
-  padding: 2px;
-  vertical-align: top;
-}
-
-nav ul {
-  padding: 0px;
-}
-
-nav li, form {
-  display: inline;
-  margin-right: 20px;
+#pic {
+  margin-bottom: 60px;
 }
 
 .errors {
   background-color: red;
 }
 
-h1 {
-  margin: 0;
-  padding-left: 10px;
+.review {
+  background-color: #eeeeee;
 }
-
-#logo {
-  float: left;
-  margin-right: 20px;
+.username {
+  color: gray;
+  font-size: 80%
 }
-
-nav, nav ul {
-  display: inline;
-}
-#strapline {
-  margin-bottom: 10px;
-}
-
-
-/*top rated, newest comedians pages */
-
-#comedians {
-}
-
-.comedian {
-  display: inline-block;
-  margin: 10px;
-}
-.comedian img {
-  height: 200px;
-  width: 200px;
-  border-radius: 5%;
-  border: 2px solid black;
-}
-.name_and_rating {
-  position: relative;
-  left:20px;
-  top:-40px;
-  color: white;
-  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-  text-decoration: none;
-}
-
-/* show/edit comedian pages */
-#name {
-  display: inline-block;
-}
-#rating {
-}
-#rating input {
-  width: 50px;
-}
-#media {
-  display: inline-block;
-  width: 30%px;
-  margin-right: 20px;
-}
-
-#text {
-  display: inline-block;
-  max-width: 66%;
-  vertical-align: top
-}
-
-#pic, #bio, #contact {
-  border: 4px solid black;
-  border-radius: 5px;
-}
-
-#bio {
-  min-height: 320px;
-}
-
-#pic, #pic img, #video {
-  width: 320px;
-}
-
-#pic, #contact {
-  margin-bottom: 10px;
-}
-
-#contact, #bio {
-  padding: 10px;
+.date {
+  font-size: 80%
 }
 
 #video {
-  font-size: small;
+  padding-top: 20px;
+  background-color: #074e68;
 }
-#submit {
-  background-color: rgb(133, 185, 239);
-  height: 40px;
-  font-weight: bold;
+footer {
+  padding: 10px;
+  background-color: #074e68;
+  color: white;
+  font-size: 80%;
+  margin-top: 10px;
+  text-align: center;
 }
+#strapline {
+  color:  #074e68;
 
-.review {
-  border: 1px solid black;
 }
-.your_review {
-  width: 100%;
-}
-.your_review text_area {
-  width: 100%;
-}
-
-#reviews text_area {
-  width: 100%;
-}
-.username {
-  color: blue;
-}
-
-/*general*/ 
-
-input {
+.star_button {
+  background-image:url('stars.gif');
+  width: 16px;
+  height: 16px;
+  margin: 0;
+  border: none;
   background-color: white;
-  text-decoration: underline;
   cursor: pointer; 
   cursor: hand;
-  font-size: 1em;
+}
+.star_unchecked_button {
+  background-image:url('stars_unchecked.gif');
+  width: 16px;
+  height: 16px;
+  margin: 0;
+  border: none;
+  background-color: white;
+  cursor: pointer; 
+  cursor: hand;
+}
+#rating form {
+  display: inline-block;
 }

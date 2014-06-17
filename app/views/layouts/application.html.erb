@@ -1,51 +1,81 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title>Comedy Seed</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= stylesheet_link_tag 'http://fonts.googleapis.com/css?family=Short+Stack' %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
 
-</head>
-<body>
-<header>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
+    <title><%= content_for?(:title) ? yield(:title)+" | Comedy Seed" : "Comedy Seed" %></title>
 
-  <div id="logo"><%= link_to image_tag("comedy_seed_logo.png"), root_path %></div>
-  <nav>
-    <div id="strapline">Watch, rate and review new comedians.</div>
-    <ul>
-      <li><%= link_to "Top Rated", top_comedians_path %></li>
-      <li><%= link_to "Newest", newest_comedians_path %></li>
+    <%= stylesheet_link_tag    "application" %>
+    <%= javascript_include_tag "vendor/modernizr" %>
+    <%= csrf_meta_tags %>
+  </head>
 
-      <% if current_user %>
-        <li><%= link_to("Profile", edit_comedian_path(current_user.comedian)) if current_user.comedian %></li>
-        <li><%= link_to "Account", edit_user_registration_path %></li>
-        <li><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
-      <% else %>
-        <li><%= link_to "Sign In", new_user_session_path %></li>
-        <li><%= link_to "Sign Up", new_user_registration_path %></li>
-      <% end %>
+  <body>
 
-      <li>
-        <%= search_form_for @q, id: :comedian_search_form, remote: true do |f| %>
-          <%= f.text_field :stage_name_or_bio_cont, id: :comedian_search_form_field %>
-          <%= f.submit %>
-        <% end %>      
-      </li>
-    </ul>
-  
-  </nav>
-</header>
+    <nav class="top-bar" data-topbar>
+      <ul class="title-area">
+        <li class="name">
+          <h1><%= link_to "Comedy Seed", root_path %></h1>
+        </li>
+        <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
 
-<div id="container">
+      </ul>
 
-<%= yield %>
+      <section class="top-bar-section">
+        <!-- Right Nav Section -->
+        <ul class="right">
 
-</div>
+          <% if current_user %>
+            <li><%= link_to("Profile", edit_comedian_path(current_user.comedian)) if current_user.comedian %></li>
+            <li><%= link_to "Account", edit_user_registration_path %></li>
+            <li><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
+          <% else %>
+            <li><%= link_to "Sign In", new_user_session_path %></li>
+            <li><%= link_to "Sign Up", new_user_registration_path %></li>
+          <% end %>
 
-</body>
+          <li>
+            <%= search_form_for @q, id: :comedian_search_form, remote: true do |f| %>
+              <div id="ransack_search">      
+                <%= f.text_field :stage_name_or_bio_cont, id: :comedian_search_form_field %>
+              </div>
+              <div id="ransack_submit">  
+                <%= f.submit %> 
+              </div>
+            <% end %>
+          </li>
+        </ul>
+
+        <!-- Left Nav Section -->
+        <ul class="left">
+          <li><%= link_to "Top Rated", top_comedians_path %></li>
+          <li><%= link_to "Newest", newest_comedians_path %></li>
+        </ul>
+      </section>
+    </nav>
+
+    <div class="row">
+      <div class="small-12 columns">
+        <p id="strapline">Watch, rate and review new comedians.</p>
+        <div class="notice"><%= notice %></div>
+        <div class="alert"><%= alert %></div>
+      </div>
+    </div>
+
+    <div id="container">
+
+    <%= yield %>
+
+    </div>
+
+    <footer>
+      Comedy Seed is a website watching, rating and reviewing new comedians.  <br />
+
+      Questions contact post@louiechristie.com.
+    <footer>
+
+    <%= javascript_include_tag "application" %>
+  </body>
 </html>
