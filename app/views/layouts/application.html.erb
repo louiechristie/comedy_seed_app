@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title><%= content_for?(:title) ? yield(:title) : "Comedy Seed" %></title>
+    <title><%= content_for?(:title) ? yield(:title)+" | Comedy Seed" : "Comedy Seed" %></title>
 
     <%= stylesheet_link_tag    "application" %>
     <%= javascript_include_tag "vendor/modernizr" %>
@@ -13,48 +13,54 @@
 
   <body>
 
-<nav class="top-bar" data-topbar>
-  <ul class="title-area">
-    <li class="name">
-      <h1><%= link_to "Comedy Seed", root_path %></h1>
-    </li>
-  </ul>
+    <nav class="top-bar" data-topbar>
+      <ul class="title-area">
+        <li class="name">
+          <h1><%= link_to "Comedy Seed", root_path %></h1>
+        </li>
+      </ul>
 
-  <section class="top-bar-section">
-    <!-- Right Nav Section -->
-    <ul class="right">
+      <section class="top-bar-section">
+        <!-- Right Nav Section -->
+        <ul class="right">
 
-      <% if current_user %>
-        <li><%= link_to("Profile", edit_comedian_path(current_user.comedian)) if current_user.comedian %></li>
-        <li><%= link_to "Account", edit_user_registration_path %></li>
-        <li><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
-      <% else %>
-        <li><%= link_to "Sign In", new_user_session_path %></li>
-        <li><%= link_to "Sign Up", new_user_registration_path %></li>
-      <% end %>
-
-      <li>
-        <%= search_form_for @q, id: :comedian_search_form, remote: true do |f| %>
-     <div id="ransack_search">      
-      <%= f.text_field :stage_name_or_bio_cont, id: :comedian_search_form_field %>
-    </div>
-          <div id="ransack_submit">  <%= f.submit %> </div>
+          <% if current_user %>
+            <li><%= link_to("Profile", edit_comedian_path(current_user.comedian)) if current_user.comedian %></li>
+            <li><%= link_to "Account", edit_user_registration_path %></li>
+            <li><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
+          <% else %>
+            <li><%= link_to "Sign In", new_user_session_path %></li>
+            <li><%= link_to "Sign Up", new_user_registration_path %></li>
           <% end %>
-      </li>
-    </ul>
 
-    <!-- Left Nav Section -->
-    <ul class="left">
-      <li><%= link_to "Top Rated", top_comedians_path %></li>
-      <li><%= link_to "Newest", newest_comedians_path %></li>
-    </ul>
-  </section>
-</nav>
+          <li>
+            <%= search_form_for @q, id: :comedian_search_form, remote: true do |f| %>
+              <div id="ransack_search">      
+                <%= f.text_field :stage_name_or_bio_cont, id: :comedian_search_form_field %>
+              </div>
+              <div id="ransack_submit">  
+                <%= f.submit %> 
+              </div>
+            <% end %>
+          </li>
+        </ul>
 
-    <p id="strapline">Watch, rate and review new comedians.</p>
-    
-    <div class="notice"><%= notice %></div>
-    <div class="alert"><%= alert %></div>
+        <!-- Left Nav Section -->
+        <ul class="left">
+          <li><%= link_to "Top Rated", top_comedians_path %></li>
+          <li><%= link_to "Newest", newest_comedians_path %></li>
+        </ul>
+      </section>
+    </nav>
+
+    <div class="row">
+      <div class="small-12 columns">
+        <p id="strapline">Watch, rate and review new comedians.</p>
+        
+        <div class="notice"><%= notice %></div>
+        <div class="alert"><%= alert %></div>
+      </div>
+    </div>
 
     <div id="container">
 

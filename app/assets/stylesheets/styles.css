@@ -31,72 +31,25 @@ display: inline-block;
   margin-right: 10px;
 }
 
-/*body {
-  font-family: Helvetica;
+#pic {
+  margin-bottom: 60px;
 }
 
 .errors {
   background-color: red;
 }
 
-#container, nav {
-  background-color: white
-}
-
-nav {
-  padding: 2px;
-  font-family: 'Short Stack', Helvetica;
-  vertical-align: top;
-}
-
-nav ul {
-  padding: 0px;
-}
-
-#container {
-}
-
-nav li, form {
-  display: inline;
-  margin-right: 20px;
-}
-
-h1 {
-  margin: 0;
-  padding-left: 10px;
-}
-#name {
-  display: inline-block;
-}
-#rating {
-}
-#rating input {
-  width: 50px;
-}
-#logo {
-  float: left;
-  margin-right: 20px;
-}
-
-nav, nav ul {
-  display: inline;
-}
-#strapline {
-  margin-bottom: 10px;
-}
 .review {
-  border: 1px solid black;
-}
-.your_review {
-  width: 100%;
-}
-.your_review text_area {
-  width: 100%;
-}
-
-#reviews text_area {
-  width: 100%;
+  background-color: #eeeeee;
 }
 .username {
-  color: blue;
-}*/
+  color: gray;
+  font-size: 80%
+}
+.date {
+  font-size: 80%
+}
+#video {
+  background-color: #074e68;
+}
+
