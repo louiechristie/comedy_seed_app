@@ -10,9 +10,12 @@ body {
   background-color: white
 }
 
+header {
+  border-bottom: 1px dotted black;
+}
+
 nav {
   padding: 2px;
-  font-family: 'Short Stack', Helvetica;
   vertical-align: top;
 }
 
@@ -66,4 +69,11 @@ nav, nav ul {
 }
 .username {
   color: blue;
+}
+#comedians {
+  max-width: 640px;
+  margin: auto;
+  columns:100px 3;
+  -webkit-columns:100px 3; /* Safari and Chrome */
+  -moz-columns:100px 3; /* Firefox */
 }
