@@ -27,6 +27,7 @@ end
 group :production do
   gem 'pg'
   gem 'rails_12factor'
+  gem 'sass', '3.2.13'
 end
 
 
