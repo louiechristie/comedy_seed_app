@@ -1,4 +1,37 @@
-body {
+.comedian {
+  display: inline-block;
+  margin: 10px;
+}
+.comedian img {
+  height: 200px;
+  width: 200px;
+  border-radius: 5%;
+  border: 2px solid black;
+}
+
+.name_and_rating {
+  position: relative;
+  left:20px;
+  top:-40px;
+  color: white;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+#ransack_submit {
+display: inline-block;
+}
+
+#ransack_search {
+  width: 70%;
+  display: inline-block;
+}
+
+#container {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+/*body {
   font-family: Helvetica;
 }
 
@@ -66,4 +99,4 @@ nav, nav ul {
 }
 .username {
   color: blue;
-}
+}*/

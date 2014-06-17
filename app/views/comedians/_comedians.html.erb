@@ -1,3 +1,5 @@
-<% @comedians.each do |comedian| %>
-  <%= render comedian %>
-<% end %>
+<ul class="small-block-grid-3">
+  <% @comedians.each do |comedian| %>
+    <li><%= render comedian %></li>
+  <% end %>
+</ul>

@@ -1,4 +1,4 @@
-#media {
+/*#media {
   display: inline-block;
   width: 320px;
   margin-right: 20px;
@@ -34,13 +34,9 @@
 #video {
   font-size: small;
 }
-.comedian img {
-  height: 20px;
-  width: 20px;
-  border-radius: 50%;
-}
+
 #submit {
   background-color: rgb(133, 185, 239);
   height: 40px;
   font-weight: bold;
-}
+}*/
