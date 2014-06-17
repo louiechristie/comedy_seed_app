@@ -1,9 +1,10 @@
+/*Header and navigation*/
+
 body {
   font-family: Helvetica;
 }
 
-.errors {
-  background-color: red;
+#container {
 }
 
 #container, nav {
@@ -23,26 +24,20 @@ nav ul {
   padding: 0px;
 }
 
-#container {
-}
-
 nav li, form {
   display: inline;
   margin-right: 20px;
+}
+
+.errors {
+  background-color: red;
 }
 
 h1 {
   margin: 0;
   padding-left: 10px;
 }
-#name {
-  display: inline-block;
-}
-#rating {
-}
-#rating input {
-  width: 50px;
-}
+
 #logo {
   float: left;
   margin-right: 20px;
@@ -54,6 +49,83 @@ nav, nav ul {
 #strapline {
   margin-bottom: 10px;
 }
+
+
+/*top rated, newest comedians pages */
+
+#comedians {
+}
+
+.comedian {
+  display: inline-block;
+  margin: 10px;
+}
+.comedian img {
+  height: 200px;
+  width: 200px;
+  border-radius: 5%;
+  border: 2px solid black;
+}
+.name_and_rating {
+  position: relative;
+  left:20px;
+  top:-40px;
+  color: white;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  text-decoration: none;
+}
+
+/* show/edit comedian pages */
+#name {
+  display: inline-block;
+}
+#rating {
+}
+#rating input {
+  width: 50px;
+}
+#media {
+  display: inline-block;
+  width: 30%px;
+  margin-right: 20px;
+}
+
+#text {
+  display: inline-block;
+  max-width: 66%;
+  vertical-align: top
+}
+
+#pic, #bio, #contact {
+  border: 4px solid black;
+  border-radius: 5px;
+}
+
+#bio {
+  min-height: 320px;
+}
+
+#pic, #pic img, #video {
+  width: 320px;
+}
+
+#pic, #contact {
+  margin-bottom: 10px;
+}
+
+#contact, #bio {
+  padding: 10px;
+}
+
+#video {
+  font-size: small;
+}
+#submit {
+  background-color: rgb(133, 185, 239);
+  height: 40px;
+  font-weight: bold;
+}
+
 .review {
   border: 1px solid black;
 }
@@ -70,10 +142,13 @@ nav, nav ul {
 .username {
   color: blue;
 }
-#comedians {
-  max-width: 640px;
-  margin: auto;
-  columns:100px 3;
-  -webkit-columns:100px 3; /* Safari and Chrome */
-  -moz-columns:100px 3; /* Firefox */
+
+/*general*/ 
+
+input {
+  background-color: white;
+  text-decoration: underline;
+  cursor: pointer; 
+  cursor: hand;
+  font-size: 1em;
 }
