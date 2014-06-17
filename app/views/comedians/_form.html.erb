@@ -14,14 +14,18 @@
   </div>
   
   <div id="media">
-    <div id="pic">
-      <%= f.label :image %>
-      <%= image_tag @comedian.image.url || "silhouette.png" %>
-      <%= f.file_field :image %><br />
+    <div class="row">
+      <div class="small-6 small-centered columns">
+        <div id="pic">
+          <%= f.label :image %>
+          <%= image_tag @comedian.image.url || "silhouette.png" %>
+          <%= f.file_field :image %><br />
+        </div>
+        <%= f.label "Youtube video link" %>
+        <%= f.text_field :video, value: @comedian.try(:video) %><br />
+        <%= raw(youtube_embed(@comedian.try(:video))) %>
+      </div>
     </div>
-      <%= f.label "Youtube video link" %>
-      <%= f.text_field :video, value: @comedian.try(:video) %><br />
-      <%= raw(youtube_embed(@comedian.try(:video))) %>
   </div>
   <div id="text">
     <div id="bio">
