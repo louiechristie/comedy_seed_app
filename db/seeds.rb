@@ -3,10 +3,10 @@
 #
 # Examples:
 #
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
+#   cities = City.create!([{ name: 'Chicago' }, { name: 'Copenhagen' }])
+#   Mayor.create!(name: 'Emanuel', city: cities.first)
 
-bill_bailey_user = User.create(
+bill_bailey_user = User.create!(
             username:  'billbailey', 
             email: 'billbailey@louiechristie.com',
             is_comedian: true,
@@ -37,7 +37,7 @@ The Happening (Channel 4)
 "Frequently hilarious and a damn good guitarist" - The Guardian'}
           })
 
-alan_car_user = User.create(
+alan_car_user = User.create!(
             username:  'Alan.Carr', 
             email: 'alancarr@louiechristie.com',
             is_comedian: true,
@@ -65,7 +65,7 @@ Alan has featured in Baby Cow's Brain Candy on BBC3 and also as a panellist on C
 'Sharp, sassy material with pitch perfect comic timing' The List}
           })
 
-micky_flanagan_user = User.create(
+micky_flanagan_user = User.create!(
             username:  'Micky_Flanagan', 
             email: 'mickyflanagan@louiechristie.com',
             is_comedian: true,
@@ -96,7 +96,7 @@ Pick of the Week - "The rising star Micky Flanagan" - Sunday Times
 "Micky is the very embodiment of the cheeky, chirpy Cockney, and his chatty, effervescent delivery engages the most reticent of rooms. The infectious energy is also heightened by his exaggerated, almost camp, reactions. It all makes for a rambunctious set that's sometimes rude, sometimes thoughtful, but rarely short of hilarious. Recommended." Chortle.co.uk}
           })
 
-sarah_millican_user = User.create(
+sarah_millican_user = User.create!(
             username:  'Sarah_Millican', 
             email: 'sarahmillican@louiechristie.com',
             is_comedian: true,
@@ -133,7 +133,7 @@ A regular at the Funny Bones Comedy Clubs, Stand Up Live and various gigs around
 Clubs where Sarah has performed sets between 10 and 20 min sets include The Stand, HI FI Club, Funny Bones, The Other Side, Comedy Junction and Mirth Control. She has performed 50 gigs and has over 50 booked including The Comedy Store, Covent Garden Comedy Club, Laugh @ Ginglik, XS Malarkey, The Frog and Bucket, Just Laugh and gigs for CK Productions and Agraman.}
           })
 
-russell_howard_user = User.create(
+russell_howard_user = User.create!(
             username:  'RussellHoward', 
             email: 'russellhoward@louiechristie.com',
             is_comedian: true,
@@ -162,7 +162,7 @@ What the press said:
 "An adorable talent…quick witted, flippant and very funny" - Three Weeks}
           })
 
-jimmy_car_user = User.create(
+jimmy_car_user = User.create!(
             username:  'JimmyCarr', 
             email: 'jimmycarr@louiechristie.com',
             is_comedian: true,
@@ -185,7 +185,7 @@ Jimmy made a teeny bit of history by being the first relatively-well-known-comed
 Although Jimmy is engaged to his long-term girlfriend, he's admitted that he didn't lose his virginity until the age of 26 because of some strict religious beliefs he held.}
           })
 
-jack_dee_user = User.create(
+jack_dee_user = User.create!(
             username:  'JackDee', 
             email: 'jackdee@louiechristie.com',
             is_comedian: true,
@@ -220,7 +220,7 @@ Jack survived Celebrity Big Brother. So far this year, Jack has completed over 1
 video or DVD in November: Jack Dee Live at the Apollo, (VVL). You may also have spotted Jack on Celebrity Big Brother for Comic Relief. To Jack's surprise, he not only survived the week and the company of Anthea Turner, Vanessa Feltz and Chris Eubank, he came away with the coveted title as the last to leave the house. Later this year you will see Jack facing yet another challenge, surviving in the frozen wastes of Siberia with only a herd of reindeer for company in Celebrity Alone (BBC1) to be screened in December.}
           })
 
-john_bishop_user = User.create(
+john_bishop_user = User.create!(
             username:  'JohnBishop', 
             email: 'johnbishop@louiechristie.com',
             is_comedian: true,
@@ -269,7 +269,7 @@ Hanover International Financial Services Annual Conference
 "The level of popularity that Bishop elicits is because, from the very beginning, he's shown spontaneity rarely seen in someone of his experience. "I just do the stuff that's in my head, but there's a little bit of structure to it. Though Steve Harris (comedian) said to me once 'I like it when I'm watching you because there are times that you almost die.'" City Life}
       })
 
-lee_evans_user = User.create(
+lee_evans_user = User.create!(
             username:  'LeeEvans', 
             email: 'leeevans@louiechristie.com',
             is_comedian: true,
@@ -334,7 +334,7 @@ Funny Bones, directed by Peter Chelsom (Hear My Song) (1995)
 }
           })
 
-peter_kay_user = User.create(
+peter_kay_user = User.create!(
             username:  'peter_kay', 
             email: 'peterkay@louiechristie.com',
             is_comedian: true,
