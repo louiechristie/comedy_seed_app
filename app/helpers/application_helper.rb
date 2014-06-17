@@ -16,5 +16,9 @@ module ApplicationHelper
     </div>}
 
   end
+
+  def stars(number)
+    number.times.map {image_tag 'stars.gif'}.join
+  end
   
 end

@@ -2,10 +2,11 @@
   display: inline-block;
   margin: 10px;
 }
-.comedian img {
+.comedian_thumb img {
   height: 200px;
   width: 200px;
   border-radius: 50%;
+  display: inline-block;
 }
 
 .name_and_rating {
@@ -47,5 +48,14 @@ display: inline-block;
 #video {
   background-color: #074e68;
 }
-
-
+footer {
+  padding: 10px;
+  background-color: #074e68;
+  color: white;
+  font-size: 80%;
+  margin-top: 10px;
+  text-align: center;
+}
+#strapline {
+  color:  #074e68;
+}
