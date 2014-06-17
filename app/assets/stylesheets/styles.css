@@ -59,3 +59,26 @@ footer {
 #strapline {
   color:  #074e68;
 }
+.star_button {
+  background-image:url('stars.gif');
+  width: 16px;
+  height: 16px;
+  margin: 0;
+  border: none;
+  background-color: white;
+  cursor: pointer; 
+  cursor: hand;
+}
+.star_unchecked_button {
+  background-image:url('stars_unchecked.gif');
+  width: 16px;
+  height: 16px;
+  margin: 0;
+  border: none;
+  background-color: white;
+  cursor: pointer; 
+  cursor: hand;
+}
+#rating form {
+  display: inline-block;
+}
