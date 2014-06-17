@@ -46,6 +46,7 @@ display: inline-block;
   font-size: 80%
 }
 #video {
+  padding-top: 20px;
   background-color: #074e68;
 }
 footer {

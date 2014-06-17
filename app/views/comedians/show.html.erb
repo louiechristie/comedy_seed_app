@@ -14,7 +14,7 @@
       <%= @comedian.try(:stage_name) %>
       <%= link_to "Edit", edit_comedian_path if @comedian == current_user %>
     </h1>
-    Avg rating:<span class="stars"><%= @comedian.avg_rating.nan? ? "no votes" : raw(stars(@comedian.avg_rating.round))  %></span>
+    Avg rating: <span class="stars"><%= @comedian.avg_rating.nan? ? "no votes" : raw(stars(@comedian.avg_rating.round))  %></span>
       <br />
       <br />
       <%= render partial: 'rating' %>
