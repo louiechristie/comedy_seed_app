@@ -1,9 +1,9 @@
 <div class="comedian">
   <%= link_to comedian do %>
-    <%= image_tag comedian.image.url || "silhouette.svg" %>
+    <%= image_tag comedian.image.url || "silhouette.png" %>
     <div class="name_and_rating">
       <%= comedian.try :stage_name %>
-      <%= comedian.avg_rating.nan? ? "" : comedian.avg_rating.to_s+"*"  %>
+      <span class="stars"><%= comedian.avg_rating.nan? ? "" : comedian.avg_rating.to_s  %></span>
     </div>
    <% end %>
 </div>
