@@ -7,7 +7,7 @@ class ComediansController < ApplicationController
   end
 
   def newest
-    @comedians = @q.result(:distinct => true).reverse!
+    @comedians = @q.result(:distinct => true).sort_by!{|comedian| comedian.created_at }.reverse!
   end
 
   def top
