@@ -1,0 +1,22 @@
+<table>
+  <tr>
+    <th>Username</th>
+    <th>Email</th> 
+    <th>Is a comedian?</th>
+    <th>Delete</th>
+  </tr>
+<% @users.each do |user| %>
+  <tr>
+    <td><%= user.username %></td>
+    <td><%= user.email %></td>
+    <td>
+      <% if user.is_comedian %>
+        <%= link_to "true", user.comedian %>
+      <% else %>
+        <%= user.is_comedian %>
+      <% end %>
+    </td>
+    <td><%= link_to "delete", user, method: :delete %> </td>
+  </tr>
+<% end %>
+</table>
