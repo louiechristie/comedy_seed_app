@@ -1,0 +1,22 @@
+<div id="home_page">
+  <div class="row">
+
+    <div class="small-8 columns">
+      <div class="title">
+        <h1>Comedy Seed</h1> 
+        <h2>Watch, rate and review comedians</h2>
+      </div>
+    </div>
+
+    <div class="small-4 columns">
+      <div class="panel callout radius">
+        <p>Are you a comedian?  <%= link_to "Sign up and create a profile.", new_user_registration_path %></p>
+
+        <p>Are you a comedy fan?  Check out our <%= link_to "top", top_comedians_path %>, and <%= link_to "newest", newest_comedians_path %> comedians or <%= link_to "sign up.", new_user_registration_path %></p>
+
+        <p>Already a member?  <%= link_to "Sign in here.", new_user_session_path %></p>
+      </div>
+    </div>
+
+  </div>
+</div>

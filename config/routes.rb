@@ -1,6 +1,7 @@
 ComedySeedApp::Application.routes.draw do
   devise_for :users, controllers: {registrations: 'registrations' }
 
+    resources :home, only: [:index]
 
     resources :users, :ratings
 
@@ -18,7 +19,7 @@ ComedySeedApp::Application.routes.draw do
       end
     end
 
-  root :to => 'comedians#top'
+  root :to => 'home#index'
 
   
 end

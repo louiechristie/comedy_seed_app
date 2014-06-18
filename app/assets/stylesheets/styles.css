@@ -64,10 +64,6 @@ footer {
   margin-top: 10px;
   text-align: center;
 }
-#strapline {
-  color:  #074e68;
-
-}
 .star_button {
   background-image:url('stars.gif');
   width: 16px;
@@ -90,4 +86,12 @@ footer {
 }
 #rating form {
   display: inline-block;
+}
+#home_page {
+  vertical-align: center;
+  margin-top: 10%;
+  margin-bottom: 10%;
+}
+.title {
+  
 }

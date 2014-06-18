@@ -26,10 +26,18 @@
         <div id="pic">
           <%= f.label :image %>
           <%= image_tag @comedian.image.url || "silhouette.png" %>
-          <%= f.file_field :image %><br />
+          <%= f.file_field :image, class: "button expand" %>
         </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="small-12 small-centered columns">
         <%= f.label "Youtube video link" %>
-        <%= f.text_field :video, value: @comedian.try(:video) %><br />
+        <%= f.text_field :video, value: @comedian.try(:video) %>
+        </div>
+    </div>
+    <div class="row">
+      <div class="small-10 small-centered columns">
         <%= raw(youtube_embed(@comedian.try(:video))) %>
       </div>
     </div>

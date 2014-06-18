@@ -47,35 +47,42 @@
             <% end %>
           </li>
         </ul>
-
         <!-- Left Nav Section -->
         <ul class="left">
           <li><%= link_to "Top Rated", top_comedians_path %></li>
           <li><%= link_to "Newest", newest_comedians_path %></li>
         </ul>
       </section>
+
     </nav>
 
     <div class="row">
       <div class="small-12 columns">
-        <p id="strapline">Watch, rate and review new comedians.</p>
-        
-        <div class="notice"><%= notice %></div>
-        <div class="alert"><%= alert %></div>
+        <% if flash[:alert] %>
+          <%= content_tag :div, :id => "flash_name", :class => "alert-box error" do %>
+            <%= flash[:alert] %>
+            <a class="close">x</a>
+          <% end %>
+        <% end %>
+
+        <% if flash[:notice] %>
+          <%= content_tag :div, :id => "flash_name", :class => "alert-box success" do %>
+            <%= flash[:notice] %>
+            <a class="close">x</a>
+          <% end %>
+        <% end %>
       </div>
     </div>
 
     <div id="container">
-
-    <%= yield %>
-
+      <%= yield %>
     </div>
 
     <footer>
-      Comedy Seed is a website watching, rating and reviewing new comedians.  <br />
+        Comedy Seed is a website watching, rating and reviewing comedians.  <br />
 
-      Contact: post@louiechristie.com
-    <footer>
+        Contact: post@louiechristie.com
+    </footer>
 
     <%= javascript_include_tag "application" %>
   </body>
