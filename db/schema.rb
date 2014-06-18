@@ -11,17 +11,18 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140615142251) do
+ActiveRecord::Schema.define(:version => 20140618101432) do
 
   create_table "comedians", :force => true do |t|
     t.text     "bio"
     t.string   "image"
     t.string   "video"
     t.integer  "user_id"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",                         :null => false
+    t.datetime "updated_at",                         :null => false
     t.string   "slug"
     t.string   "stage_name"
+    t.boolean  "email_is_public", :default => false, :null => false
   end
 
   add_index "comedians", ["slug"], :name => "index_comedians_on_slug"

@@ -18,6 +18,11 @@
       <br />
       <br />
       <%= render partial: 'rating' %>
+
+      <div id="email">
+        <p><%= mail_to(@comedian.user.email) if @comedian.email_is_public %><p>
+      </div>
+
   </div>
 </div>
 

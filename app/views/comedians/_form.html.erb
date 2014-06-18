@@ -12,6 +12,13 @@
     <%= f.label :stage_name %>
     <%= f.text_field :stage_name, value: @comedian.try(:stage_name) %>
   </div>
+    
+  <div id="contact">
+    <%= f.label "Contact Details" %>
+    <%= link_to(@comedian.user.try(:email), edit_user_registration_path)  %>
+    <%= f.radio_button :email_is_public, true, value: true, checked: @comedian.email_is_public %> <%= f.label "Email private" %>  
+    <%= f.radio_button :email_is_public, false, value: false, checked: !@comedian.email_is_public %><%= f.label "Email public" %>
+  </div>
   
   <div id="media">
     <div class="row">

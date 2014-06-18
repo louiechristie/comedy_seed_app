@@ -4,7 +4,7 @@ class Comedian < ActiveRecord::Base
   has_many :ratings
   has_many :reviews
 
-  attr_accessible :bio, :image, :user_id, :video, :stage_name
+  attr_accessible :bio, :image, :user_id, :video, :stage_name, :email_is_public
 
   mount_uploader  :image, ImageUploader
 
