@@ -10,19 +10,22 @@
   </div>
 
   <div class="small-6 columns">
-    <h1>
-      <%= @comedian.try(:stage_name) %>
-      <%= link_to "Edit", edit_comedian_path if @comedian == current_user %>
-    </h1>
-    Stars: <span class="stars"><%= @comedian.avg_rating.nan? ? "no votes" : raw(stars(@comedian.avg_rating.round))  %></span>
+    
+    <div class="basic_info">
+
+      <h1>
+        <%= @comedian.try(:stage_name) %>
+        <%= link_to "Edit", edit_comedian_path if @comedian == current_user %>
+      </h1>
+      Stars: <span class="stars"><%= @comedian.avg_rating.nan? ? "no votes" : raw(stars(@comedian.avg_rating.round))  %></span>
       <br />
       <br />
       <%= render partial: 'rating' %>
-
+      <br />
       <div id="email">
         <p><%= mail_to(@comedian.user.email) if @comedian.email_is_public %><p>
       </div>
-
+    </div>
   </div>
 </div>
 

@@ -3,17 +3,25 @@
   display: inline-block;
   margin: 10px;
 }
+
+
 .comedian_thumb img {
   height: 200px;
   width: 200px;
   border-radius: 50%;
   display: inline-block;
-
+  border: 2px solid black;
 }
 
 .name_and_rating {
   text-align: center;
 }
+
+.basic_info {
+  font-size: 150%;
+  margin-top: 20%;
+}
+
 
 
 #ransack_submit {
@@ -24,8 +32,12 @@ display: inline-block;
   width: 70%;
   display: inline-block;
 }
+
 #pic {
-  max-width: 480px;
+  margin-top: 20px;
+}
+#pic img {
+  max-height: 480px;
 }
 
 #container {
@@ -93,5 +105,5 @@ footer {
   margin-bottom: 10%;
 }
 .title {
-  
+
 }
