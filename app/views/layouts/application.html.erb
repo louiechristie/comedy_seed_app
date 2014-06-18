@@ -31,6 +31,9 @@
             <% if can? :manage, Review %>
             <li><%= link_to("Reviews", reviews_path) %></li>
             <% end %>
+            <% if can? :manage, User %>
+            <li><%= link_to("Users", users_path) %></li>
+            <% end %>
             <li><%= link_to("Profile", edit_comedian_path(current_user.comedian)) if current_user.comedian %></li>
             <li><%= link_to "Account", edit_user_registration_path %></li>
             <li><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
