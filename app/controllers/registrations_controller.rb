@@ -6,7 +6,8 @@ class RegistrationsController < Devise::RegistrationsController
     if current_user.is_comedian?
         return edit_comedian_path(current_user.comedian)
     else
-       return root_path
+       return top_comedians_path
     end
   end
+
 end
