@@ -22,7 +22,7 @@
   
   <div id="media">
     <div class="row">
-      <div class="small-6 small-centered columns">
+      <div class="small-12 medium-6 small-centered columns">
         <div id="pic">
           <%= f.label :image %>
           <%= image_tag @comedian.image.url || "silhouette.png" %>
@@ -37,7 +37,7 @@
         </div>
     </div>
     <div class="row">
-      <div class="small-10 small-centered columns">
+      <div class="small-12 medium-10 small-centered columns">
         <%= raw(youtube_embed(@comedian.try(:video))) %>
       </div>
     </div>

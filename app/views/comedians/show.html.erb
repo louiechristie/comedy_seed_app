@@ -3,13 +3,13 @@
 <% end %> 
 
 <div class="row">
-  <div class="small-6 columns">
+  <div class="small-12 medium-6 columns">
       <div id="pic">
         <%= image_tag @comedian.image.url || "silhouette.png" %>
       </div>
   </div>
 
-  <div class="small-6 columns">
+  <div class="small-12 medium-6 columns">
     
     <div class="basic_info">
 
@@ -30,7 +30,7 @@
 </div>
 
 <div class="row" id="video">
-  <div class="small-8 small-centered columns">
+  <div class="small-12 medium-8 small-centered columns">
     <%= raw(youtube_embed(@comedian.try(:video))) || "No video supplied." %>
   </div>
 </div>
