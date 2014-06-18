@@ -32,6 +32,8 @@ class User < ActiveRecord::Base
 
   validates_inclusion_of :is_comedian, :in => [true, false]
 
+  make_flagger
+
   after_create :create_comedian
   after_update :update_comedian
 

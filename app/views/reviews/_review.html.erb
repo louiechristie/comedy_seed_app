@@ -1,11 +1,22 @@
-<div class="review">
-  <p>
-    <span class="username">
-      <%= review.user.comedian ?  link_to(review.user.username, review.user.comedian) : review.user.username  %>
-    </span>
-    <span class="date">
-      <%= time_ago_in_words(review.created_at)+" ago." %>
-    </span>
-  </p>
-  <p><%= simple_format(review.content) %> </p>
-</div>
+<% unless review.flagged? %>
+
+  <div class="review">
+    <p>
+      <span class="username">
+        <%= review.user.comedian ?  link_to(review.user.username, review.user.comedian) : review.user.username  %>
+      </span>
+      <span class="date">
+        <%= time_ago_in_words(review.created_at)+" ago." %>
+      </span>
+      <span class="flag">
+        <% if review.flagged? %>
+          flagged as inappropriate
+        <% else %>
+          <%= link_to("flag as inappropriate", inappropriate_review_path(review)) %>
+        <% end %>
+      </span>
+    </p>
+    <p><%= simple_format(review.content) %> </p>
+  </div>
+
+<% end %>

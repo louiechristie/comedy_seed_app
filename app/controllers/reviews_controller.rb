@@ -16,6 +16,19 @@ class ReviewsController < ApplicationController
 
   end
 
+  def inappropriate
+    @review = Review.find(params[:id])
+    current_user.flag(@review, :inappropriate)
+    redirect_to :back, alert: "You have reported this review as inappropriate."
+  end
+
+  def delete_inappropriate
+    @review = Review.find(params[:id])
+    @review.flaggings.destroy_all
+    redirect_to admin_index_path, notice: "You have removed the flag."
+  end
+
+
   def update
     @comedian = Comedian.find(params[:review].fetch(:comedian_id))
     rating = Review.find params[:id]

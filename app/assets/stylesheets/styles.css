@@ -48,7 +48,7 @@ display: inline-block;
   color: gray;
   font-size: 80%
 }
-.date {
+.date, .flag {
   font-size: 80%
 }
 
