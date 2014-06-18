@@ -2,6 +2,10 @@ class ReviewsController < ApplicationController
 
   load_and_authorize_resource
 
+  def index
+    @reviews = Review.all
+  end
+
   def create
 
     @comedian = Comedian.find(params[:review].fetch(:comedian_id))
@@ -25,7 +29,7 @@ class ReviewsController < ApplicationController
   def delete_inappropriate
     @review = Review.find(params[:id])
     @review.flaggings.destroy_all
-    redirect_to admin_index_path, notice: "You have removed the flag."
+    redirect_to reviews_path, notice: "You have removed the flag."
   end
 
 
@@ -38,6 +42,13 @@ class ReviewsController < ApplicationController
     end
 
     redirect_to @comedian
+  end
+
+  def destroy
+    review = Review.find(params[:id])
+    review.delete
+    flash[:alert] = "Review destroyed."
+    redirect_to reviews_path
   end
 
 
