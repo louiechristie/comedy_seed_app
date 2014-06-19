@@ -23,10 +23,12 @@ class Ability
       can :manage, Comedian, user_id: user.id
 
       can :read, Rating
+      can :create, Rating, user_id: user.id
       can :manage, Rating, user_id: user.id
 
       can :read, Review
-      can :update, Review, user_id: user.id
+      can :create, Review
+      can :manage, Review, user_id: user.id
 
     end
 
