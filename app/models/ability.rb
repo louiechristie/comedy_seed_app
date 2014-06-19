@@ -28,6 +28,7 @@ class Ability
 
       can :read, Review
       can :create, Review
+      can :inappropriate, Review
       can :update, Review, user_id: user.id
 
     end
