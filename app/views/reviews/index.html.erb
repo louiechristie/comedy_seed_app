@@ -3,7 +3,7 @@
   <tr>
     <td><%= User.find(review.user_id).username %></td>
     <td><%= Comedian.find(review.comedian_id).stage_name %></td>
-    <td><%= simple_format(review.content) %></td>
+    <td><%= simple_format(h(review.content)) %></td>
     <td><% if review.flagged? %>flagged as inappropriate<% end %></td>
     <td><%= link_to("flag", inappropriate_review_path(review)) %></td>
     <td><%= link_to("unflag", delete_inappropriate_review_path(review), method: :delete) %></td>
