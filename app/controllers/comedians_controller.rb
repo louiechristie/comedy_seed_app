@@ -33,9 +33,13 @@ class ComediansController < ApplicationController
   end
 
   def update
-    comedian = Comedian.find params[:id]
-    comedian.update_attributes params[:comedian]
-    redirect_to comedian
+    @comedian = Comedian.find params[:id]
+    @comedian.update_attributes! params[:comedian]
+    if params[:comedian][:image].present?
+      render :crop
+    else
+      redirect_to @comedian, notice: "Profile updated."
+    end
   end
 
   def destroy

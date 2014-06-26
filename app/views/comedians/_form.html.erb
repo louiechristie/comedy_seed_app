@@ -25,8 +25,10 @@
       <div class="small-12 medium-6 small-centered columns">
         <div id="pic">
           <%= f.label :image %>
-          <%= image_tag @comedian.image.url || "silhouette.png" %>
+          <%= image_tag @comedian.image_url(:large) || "silhouette.png" %>
           <%= f.file_field :image, class: "button expand" %>
+          <%= f.label :remote_image_url, "or image URL" %><br />
+          <%= f.text_field :remote_image_url %>
         </div>
       </div>
     </div>

@@ -5,7 +5,7 @@
 <div class="row">
   <div class="small-12 medium-6 columns">
       <div id="pic">
-        <%= image_tag @comedian.image.url || "silhouette.png" %>
+        <%= image_tag @comedian.image_url(:large) || "silhouette.png" %>
       </div>
   </div>
 
@@ -15,7 +15,7 @@
 
       <h1>
         <%= @comedian.try(:stage_name) %>
-        <%= link_to "Edit", edit_comedian_path if @comedian == current_user %>
+        <%= link_to "Edit", edit_comedian_path if @comedian.user == current_user %>
       </h1>
       Stars: <span class="stars"><%= @comedian.avg_rating.nan? ? "no votes" : raw(stars(@comedian.avg_rating.round))  %></span>
       <br />

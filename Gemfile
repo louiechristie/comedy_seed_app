@@ -8,6 +8,7 @@ gem 'rails', '3.2.18'
 
 gem 'ransack'
 gem 'carrierwave', '= 0.9.0'
+gem "rmagick"
 gem "fog", "~> 1.3.1"
 gem 'devise'
 gem 'cancan'

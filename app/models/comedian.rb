@@ -4,7 +4,9 @@ class Comedian < ActiveRecord::Base
   has_many :ratings
   has_many :reviews
 
-  attr_accessible :bio, :image, :user_id, :video, :stage_name, :email_is_public
+  attr_accessor :crop_x, :crop_y, :crop_w, :crop_h
+
+  attr_accessible :bio, :image, :remote_image_url, :user_id, :video, :stage_name, :email_is_public, :crop_x, :crop_y, :crop_w, :crop_h
 
   mount_uploader  :image, ImageUploader
 
@@ -14,6 +16,12 @@ class Comedian < ActiveRecord::Base
 
   extend FriendlyId
   friendly_id :stage_name, use: :slugged
+
+  after_update :crop_image
+
+  def crop_image
+    image.recreate_versions! if crop_x.present?
+  end
 
   def avg_rating
 

@@ -2,7 +2,7 @@
   <%= link_to comedian do %>
 
     <div class="comedian_thumb">
-      <%= image_tag comedian.image.url || "silhouette.png" %>
+      <%= image_tag comedian.image_url(:thumb) || "silhouette.png" %>
     </div>
     <div class="name_and_rating">
       <%= comedian.try :stage_name %>
