@@ -4,10 +4,10 @@
 
 <%= form_for @comedian do |f| %>
   <% %w[x y w h].each do |attribute| %>
-    <%= f.text_field "crop_#{attribute}" %><br />
+    <%= f.hidden_field "crop_#{attribute}" %><br />
   <% end %>
   <div class="actions">
-    <%= f.submit "Crop" %>
+    <%= f.submit "Crop", class: "button expand" %>
   </div>
 
 <% end %>

@@ -34,8 +34,8 @@ class ComediansController < ApplicationController
 
   def update
     @comedian = Comedian.find params[:id]
-    @comedian.update_attributes! params[:comedian]
-    if params[:comedian][:image].present?
+    @comedian.update_attributes params[:comedian]
+    if params[:comedian][:image].present? || params[:comedian][:remote_image_url].present?
       render :crop
     else
       redirect_to @comedian, notice: "Profile updated."
