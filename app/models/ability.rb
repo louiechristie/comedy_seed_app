@@ -16,8 +16,7 @@ class Ability
     if user.role? :admin
       can :manage, :all
     else
-      can :read, User, id: user.id
-      can :update, User, id: user.id
+      can :manage, User, id: user.id
 
       can :read, Comedian
       can :manage, Comedian, user_id: user.id

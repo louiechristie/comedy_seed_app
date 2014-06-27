@@ -10,12 +10,12 @@ bill_bailey_user = User.create!(
             username:  'billbailey', 
             email: 'billbailey@louiechristie.com',
             is_comedian: true,
-            password: '12341234')
+            password: ENV['COMEDY_SEED_PASSWORD'])
 
 bill_bailey_user.comedian.update_attributes({
             stage_name:  'Bill Bailey', 
-            video: 'https://www.youtube.com/watch?v=8-xcOrgGFtA',
-            image: open("http://www.comedycv.co.uk/billbailey/2003-january-bill-bailey.jpg"),
+            video: 'https://www.youtube.com/watch?v=CbAPdmbVKp0',
+            remote_image_url: "http://www.comedycv.co.uk/billbailey/2003-january-bill-bailey.jpg",
             bio: %Q{Bill Bailey’s career has gone from strength to strength from being the founder member of The Rubber Bishops in 1989 to performing nationally in concert halls on his own one man tour.
 
 He also performs in universities and for corporate clients and internationally at the Melbourne and New Zealand Comedy Festivals as well as Hong Kong and Amsterdam.
@@ -41,11 +41,11 @@ alan_car_user = User.create!(
             username:  'Alan.Carr', 
             email: 'alancarr@louiechristie.com',
             is_comedian: true,
-            password: '12341234')
+            password: ENV['COMEDY_SEED_PASSWORD'])
 
 alan_car_user.comedian.update_attributes({
             stage_name:  'Alan Carr', 
-            video: 'https://www.youtube.com/watch?v=qytQnITpl8w',
+            video: 'https://www.youtube.com/watch?v=05_DwscrA40',
             image: open("http://www.comedycv.co.uk/alancarr/alan-carr-2005-may.jpg"),
             bio: %Q{"Alan Carr is the spiritual son of Frankie Howerd." City Life Magazine
 
@@ -69,11 +69,11 @@ micky_flanagan_user = User.create!(
             username:  'Micky_Flanagan', 
             email: 'mickyflanagan@louiechristie.com',
             is_comedian: true,
-            password: '12341234')
+            password: ENV['COMEDY_SEED_PASSWORD'])
 
 micky_flanagan_user.comedian.update_attributes({
             stage_name:  'Micky Flanagan', 
-            video: 'https://www.youtube.com/watch?v=IXyt6VcoUQI',
+            video: 'https://www.youtube.com/watch?v=MtMx-iSWJeE',
             image: open("http://www.comedycv.co.uk/mickyflanagan/2003-march-micky-flanagan.jpg"),
             bio: %Q{A professional stand-up since 1997, Micky Flanagan draws on his East End background as he ruthlessly deconstructs the Cockney myth with razor-sharp observational wit. He tells a comic tale of a working class upbringing, where alphabetti spaghetti is a luxury. Micky has come a long way since then, thanks to a university education, and he is now that rare delight - an intellectual Cockney.
 
@@ -100,11 +100,11 @@ sarah_millican_user = User.create!(
             username:  'Sarah_Millican', 
             email: 'sarahmillican@louiechristie.com',
             is_comedian: true,
-            password: '12341234')
+            password: ENV['COMEDY_SEED_PASSWORD'])
 
 sarah_millican_user.comedian.update_attributes({
             stage_name:  'Sarah Millican', 
-            video: 'https://www.youtube.com/watch?v=Gyuo9ZH3frE',
+            video: 'https://www.youtube.com/watch?v=Ttw4dBpZdtg',
             image: open("http://www.comedycv.co.uk/sarahmillican/sarah-millican-2005-may.jpg"),
             bio: %Q{Winner - Amused Moose Comedy Awards 2005
 Runner Up - So You Think You're Funny 2005
@@ -137,11 +137,11 @@ russell_howard_user = User.create!(
             username:  'RussellHoward', 
             email: 'russellhoward@louiechristie.com',
             is_comedian: true,
-            password: '12341234')
+            password: ENV['COMEDY_SEED_PASSWORD'])
 
 russell_howard_user.comedian.update_attributes({
             stage_name:  'Russell Howard', 
-            video: 'https://www.youtube.com/watch?v=4wCDuJUiisU',
+            video: 'https://www.youtube.com/watch?v=2NFZta2ltwg',
             image: open("http://www.comedycv.co.uk/russellhoward/russell-howard-2005-october.jpg"),
             bio: %Q{An instant hit with his innate ability to improvise on any subject, Russell makes the stage his own personal playground and thrives on spontaneous chats with his audience, leading them down a never-ending series of unstoppably comical journeys.
 
@@ -166,11 +166,11 @@ jimmy_car_user = User.create!(
             username:  'JimmyCarr', 
             email: 'jimmycarr@louiechristie.com',
             is_comedian: true,
-            password: '12341234')
+            password: ENV['COMEDY_SEED_PASSWORD'])
 
 jimmy_car_user.comedian.update_attributes({
             stage_name:  'Jimmy Carr', 
-            video: 'https://www.youtube.com/watch?v=fcDeLX_-oMk',
+            video: 'https://www.youtube.com/watch?v=vZpI4ILTlI8',
             image: open("http://comedycv.co.uk/jimmycarr/jimmy-carr-2010-october.jpg"),
             bio: %Q{It's fair to say that Jimmy has grown on us quite a bit. When he first 'launched' we couldn't stand the bloke, but things are looking better for hmi now in that department. He's bound to be pleased.
 
@@ -189,11 +189,11 @@ jack_dee_user = User.create!(
             username:  'JackDee', 
             email: 'jackdee@louiechristie.com',
             is_comedian: true,
-            password: '12341234')
+            password: ENV['COMEDY_SEED_PASSWORD'])
 
 jack_dee_user.comedian.update_attributes({
             stage_name:  'Jack Dee', 
-            video: 'https://www.youtube.com/watch?v=mxlD1sPCvXU',
+            video: 'https://www.youtube.com/watch?v=fjvcs0QGjCA',
             image: open("http://comedycv.co.uk/jackdee/2002-october-jack-dee.jpg"),
             bio: %Q{Since The Jack Dee Show hit the small screen in February 1992, Jack Dee has become a household name.
 
@@ -224,11 +224,11 @@ john_bishop_user = User.create!(
             username:  'JohnBishop', 
             email: 'johnbishop@louiechristie.com',
             is_comedian: true,
-            password: '12341234')
+            password: ENV['COMEDY_SEED_PASSWORD'])
 
 john_bishop_user.comedian.update_attributes({
             stage_name:  'John Bishop', 
-            video: 'https://www.youtube.com/watch?v=-xA31VgRzNY',
+            video: 'https://www.youtube.com/watch?v=N01qRVKq-N0',
             image: open("http://comedycv.co.uk/johnbishop/2002-october-john-bishop.jpg"),
             bio: %Q{John Bishop performed stand-up comedy for the first time in October 2000, within four months he was the headline act at some of the regular comedy clubs in the North of England.
 
@@ -273,11 +273,11 @@ lee_evans_user = User.create!(
             username:  'LeeEvans', 
             email: 'leeevans@louiechristie.com',
             is_comedian: true,
-            password: '12341234')
+            password: ENV['COMEDY_SEED_PASSWORD'])
 
 lee_evans_user.comedian.update_attributes({
             stage_name:  'Lee Evans', 
-            video: 'https://www.youtube.com/watch?v=iPWuSH529nA',
+            video: 'https://www.youtube.com/watch?v=i32QUG0Nmyw',
             image: open("http://comedycv.co.uk/leeevans/2002-october-lee-evans.jpg"),
             bio: %Q{"A DAZZLING COMIC GENIUS"
 
@@ -338,11 +338,11 @@ peter_kay_user = User.create!(
             username:  'peter_kay', 
             email: 'peterkay@louiechristie.com',
             is_comedian: true,
-            password: '12341234')
+            password: ENV['COMEDY_SEED_PASSWORD'])
 
 peter_kay_user.comedian.update_attributes({
             stage_name:  'Peter Kay', 
-            video: 'https://www.youtube.com/watch?v=NsuZ-CDnCVY',
+            video: 'https://www.youtube.com/watch?v=EsvDl8fsBpA',
             image: open("http://comedycv.co.uk/peterkay/2002-november-peter-kay.jpg"),
             bio: %Q{'A brilliant stand-up comedian.' - The Times
 

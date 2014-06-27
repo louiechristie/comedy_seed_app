@@ -6,8 +6,6 @@
 
 
 .comedian_thumb img {
-  height: 200px;
-  width: 200px;
   border-radius: 50%;
   display: inline-block;
   border: 2px solid black;

@@ -42,7 +42,7 @@
             <li><%= link_to "Sign Up", new_user_registration_path %></li>
           <% end %>
 
-          <li>
+          <li class="has-form">
             <%= search_form_for @q, id: :comedian_search_form, remote: true do |f| %>
               <div id="ransack_search">      
                 <%= f.text_field :stage_name_or_bio_cont, id: :comedian_search_form_field %>
