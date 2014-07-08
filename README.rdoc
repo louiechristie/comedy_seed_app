@@ -1,4 +1,8 @@
-== Comedy Seed App
+== Comedy Seed
 
-A web application for comedians to share their profile, picture, bio and video, and rate other comedians.
+A website for discovering, watching and reviewing new comedians. 
+
+Made with Ruby on Rails, Carrierwave, Javascript, Devise, HTML 5, CSS3. 
+
+http://www.comedyseed.com
 
