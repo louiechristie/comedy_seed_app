@@ -102,7 +102,7 @@ footer {
   margin-top: 10px;
   padding-top: 10%;
   padding-bottom: 10%;
-  background: url("http://www.comedyclubwilliamsburg.com/images/curtain.jpg");
+  background: url("/assets/curtain.jpg");
 }
 
 .title {
